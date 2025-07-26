@@ -1,0 +1,1844 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximun-scale=1, user-scalable=no">
+<meta name="keywords" content="線上購物,ViVa,電視購物,影音購物,3C數位,生活百貨,家電,清潔收納,美容保養,服飾配件,食品保健,開運精品">
+<meta name="description" content="ViVa美好購物網提供各種3C家電、清潔收納、保養、服飾、食品保健、開運精品等線上購物商品，致力於提供美好的購物經驗，電視購物請鎖定ViVa TV 59頻道！">
+<meta name="robots" content="ALL">
+<link rel="shortcut icon" href="https://www.vivatv.com.tw/common/images/favicons/favicon.ico">
+<title>原木鍋柄元素 廚房原木風 - ViVa美好購物網</title>
+<link rel="stylesheet" href="common/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="common/css/swiper-bundle.min.css">
+<link rel="stylesheet" href="common/css/feather.css?v1">
+<link rel="stylesheet" href="common/css/main.css?v83">
+</head>
+
+<body class="fs-7">
+
+<div id="mainWrapperNew" class="position-relative mx-auto">
+
+	<!-- 上方導覽列 NEW -->
+  <div id="topNav" class="sticky-top bg-dark-theme">
+    <div id="topNavInner" class="container-xl d-flex justify-content-between align-items-center px-2 mx-auto">
+      <div class="d-flex align-items-center">
+        <button id="vivaLogo" class="btn" type="button" onclick="location.href='Home.html'"><img src="common/images/viva-logo-white.png" class="img-fluid viva-logo"></button>
+        <!-- 2022/4/8 新增event banner -->
+        <button id="topNavAnimatedBanner" class="btn px-0" type="button" onclick="window.open('https://www.vivatv.com.tw/html/20220407.html')"><img src="common/images/animated.png" class="img-fluid top-nav-animated-banner" alt="珍愛女人節"></button>
+      </div>
+      <div class="d-flex align-items-center">
+        <div class="d-flex position-relative me-2" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="hover" title="購物車">
+            <button id="toggleCart" class="btn text-white" type="button" data-bs-toggle="modal" data-bs-target="#shoppingCart"><span class="feather icon-shopping-cart"></span></button>
+            <span class="position-absolute badge rounded-pill cart-badge"></span>
+          </div>
+        <div class="d-none d-xl-flex" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="hover" title="會員專區">
+            <button class="btn text-white" type="button" onclick="location.href='memberPortal.html'"><span class="feather icon-user"></span></button>
+          </div>
+        <div class="d-flex d-xl-none">
+          <button id="toggleSearch" class="btn text-white" type="button" data-bs-toggle="collapse" data-bs-target="#Search"><span class="feather icon-search"></span></button>
+        </div>
+        <div class="d-flex d-xl-none">
+          <button id="toggleMenu" class="btn text-white" type="button" data-bs-toggle="modal" data-bs-target="#menuModal"><span class="feather icon-menu"></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- mobile分類選單 NEW -->
+  <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header bg-dark-theme border-bottom-0">
+          <div>
+            <button class="btn fs-7 rounded-0 text-white" type="button" onclick="location.href='/Programs.go?TVNum=TVOne'"><span class="feather icon-tv"></span> 1台 節目表</button>
+            <button class="btn fs-7 rounded-0 text-white" type="button" onclick="location.href='/ProgramsTVTwo.go?TVNum=TVTwo'"><span class="feather icon-tv"></span> 2台 節目表</button>
+          </div>
+          <div>
+            <button type="button" class="btn text-white fs-5 px-1 py-0" data-bs-dismiss="modal" aria-label="Close"><span class="feather icon-x-square"></span></button>
+          </div>
+          
+        </div>
+        <div class="modal-body p-0">
+          <div class="d-flex">
+            <div class="col-4 primary-category d-flex flex-column overflow-scroll bg-light">
+              <div class="nav nav-pills w-100">
+                <!-- tab button -->
+                <button class="nav-link active highlight sticky-top" id="v-pills-1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true">品牌旗艦館</button>
+                <button class="nav-link" id="v-pills-2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false">大分類tab</button>
+                <button class="nav-link" id="v-pills-3-tab" data-bs-toggle="pill" data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false">大分類tab</button>
+                <button class="nav-link" id="v-pills-4-tab" data-bs-toggle="pill" data-bs-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4" aria-selected="false">大分類tab</button>
+                <button class="nav-link" id="v-pills-5-tab" data-bs-toggle="pill" data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5" aria-selected="false">大分類tab</button>
+                <button class="nav-link" id="v-pills-6-tab" data-bs-toggle="pill" data-bs-target="#v-pills-6" type="button" role="tab" aria-controls="v-pills-6" aria-selected="false">大分類tab</button>
+                <button class="nav-link" id="v-pills-7-tab" data-bs-toggle="pill" data-bs-target="#v-pills-7" type="button" role="tab" aria-controls="v-pills-7" aria-selected="false">大分類tab</button>
+                <!-- 一般button -->
+                <button class="btn fs-7 w-100 rounded-0" type="button">純連結</button>
+              </div>
+              <!-- 社群按鈕 -->
+              <div class="d-flex flex-column justify-content-center border-top">
+                <button class="btn" type="button"><span class="feather icon-brand-line align-middle fs-4"></span></button>
+                <button class="btn" type="button"><span class="feather icon-brand-facebook align-middle fs-4"></span></button>
+                <button class="btn" type="button"><span class="feather icon-brand-youtube align-middle fs-4"></span></button>
+              </div>
+            </div>
+            <div class="d-flex flex-column col-8 p-0 secondary-category overflow-x-hidden">
+              <div class="tab-content bg-white flex-grow-1">
+                <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
+                  <div class="d-flex flex-column">
+                    <!-- 所有品牌旗艦 -->
+                    <div class="d-flex secondary-category-items">
+                      <div class="d-flex flex-grow-1 position-relative">
+                        <div class="w-100 position-absolute overflow-x-hidden">
+                          <div id="brandLink" class="d-flex justify-content-start align-items-center fs-7 brand-link">
+                            <button class="btn fs-7 text-white rounded-0" type="button" data-highlight-target="#b1">Dyson</button>
+                            <button class="btn fs-7 text-white" type="button" data-highlight-target="#b2">3M</button>
+                            <button class="btn fs-7 text-white" type="button" data-highlight-target="#b3">禾聯</button>
+                            <button class="btn fs-7 text-white" type="button" data-highlight-target="#b4">聲寶</button>
+                            <button class="btn fs-7 text-white" type="button" data-highlight-target="#b5">美菱</button>
+                            <button class="btn fs-7 text-white" type="button" data-highlight-target="#b6">一品夫人</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex">
+                        <button id="brandToggleBtn" data-toggle="flex-wrap" data-target="#brandLink" class="btn text-white" type="button"><span class="feather icon-chevron-down"></span></button>
+                      </div>
+                    </div>
+                    <!-- 品牌旗艦的子分類 -->
+                    <div id="minorCategory" class="d-flex overflow-scroll flex-grow-1 justify-content-center">
+                      <div class="d-flex flex-column minor-category w-100">
+
+                        <div class="d-flex flex-column p-2 highlight" id="b1" data-toggle="highlight">
+                          <div class="d-flex p-2">Dyson旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2" id="b2" data-toggle="highlight">
+                          <div class="d-flex p-2">3M旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2" id="b3" data-toggle="highlight">
+                          <div class="d-flex p-2">禾聯旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2" id="b4" data-toggle="highlight">
+                          <div class="d-flex p-2">聲寶旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2" id="b5" data-toggle="highlight">
+                          <div class="d-flex p-2">美菱旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2" id="b6" data-toggle="highlight">
+                          <div class="d-flex p-2">一品夫人旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
+                  <div id="minorCategory" class="d-flex overflow-scroll flex-grow-1 justify-content-center">
+                      <div class="d-flex flex-column minor-category w-100">
+
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 搜尋列 NEW -->
+  <div id="Search" class="position-fixed w-100 collapse shadow">
+    <div class="d-flex w-100 p-3 bg-light border-bottom">
+      <div class="input-group max-width-limit-50 mx-auto">
+        <input type="text" class="form-control fs-7 p-3 py-1" placeholder="全站免運！搜尋商品" aria-label="全站免運！搜尋商品" aria-describedby="btnSearch">
+        <button class="btn btn-secondary fs-7" type="button" onclick="location.href='searchResult.html'">搜尋</button>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <main>
+    <!-- 主題活動文字 NEW -->
+    <div id="campaignLinkAndSearch" class="d-none d-xl-flex flex-column border-bottom bg-light pt-lg-2 pb-lg-2">
+      <div class="d-flex justify-content-between container-xl p-0">
+        
+        <div class="d-flex">
+          <div id="campaignLink" class="d-flex flex-grow-1 px-2 fs-7 campaign-link mx-auto">
+            <div class="d-flex align-items-center p-2 me-xl-1"><a href="productPage.html">君悅磅蛋糕</a></div>
+            <div class="d-flex align-items-center p-2 me-xl-1"><a href="primaryCategory.html">日本頭皮養護</a></div>
+            <div class="d-flex align-items-center p-2 me-xl-1"><a href="secondaryCategory.html">天然舒壓精油</a></div>
+            <div class="d-flex align-items-center p-2 me-xl-1"><a href="primaryCategory.html">暖身沖泡飲品</a></div>
+            <div class="d-flex align-items-center p-2 me-xl-1"><a href="primaryCategory.html">保濕補水面膜</a></div>
+            <div class="d-flex align-items-center p-2 me-xl-1"><a href="productPage.html">義大利聖誕麵包</a></div>
+            <div class="d-flex align-items-center p-2 me-xl-1"><a href="primaryCategory.html">肌膚修復身體乳</a></div>
+            <div class="d-flex align-items-center p-2 me-xl-1"><a href="secondaryCategory.html">3M推薦枕</a></div>
+          </div>
+          <div class="d-flex">
+            <button id="campaignToggleBtn" data-toggle="flex-wrap" data-target="#campaignLink" class="btn" type="button"><span class="feather icon-chevron-down"></span></button>
+          </div>
+        </div>
+        <!-- desktop搜尋列 -->
+        <div id="desktopSearchBar" class="d-none d-xl-flex">
+          <div class="input-group py-2">
+            <input type="text" class="form-control fs-7 p-3 py-1" placeholder="全站免運！搜尋商品" aria-label="全站免運！搜尋商品" aria-describedby="btnSearch">
+            <button class="btn btn-secondary fs-7" type="button" onclick="location.href='searchResult.html'">搜尋</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- desktop分類選單 NEW -->
+    <div id="desktopNav" class="d-none d-xl-block bg-white border-bottom sticky-top-nav custom-shadow" style="z-index: 99;">
+      <div class="container-xl g-0 p-0">
+        <div class="d-flex flex-column">
+          <!-- 大分類 -->
+          <div class="d-flex px-lg-0">
+            <div class="nav nav-pills justify-content-between w-100">
+              <button class="nav-link p-xl-3" id="d-pills-1-tab" data-url="flagshipList.html" data-bs-toggle="pill" data-bs-target="#d-pills-1" type="button" role="tab" aria-controls="d-pills-1" aria-selected="false">品牌旗艦館</button>
+              <button class="nav-link p-xl-3" id="d-pills-2-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-2" type="button" role="tab" aria-controls="d-pills-2" aria-selected="false">品味生活</button>
+              <button class="nav-link p-xl-3" id="d-pills-3-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-3" type="button" role="tab" aria-controls="d-pills-3" aria-selected="false">質感家電</button>
+              <button class="nav-link p-xl-3" id="d-pills-4-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-4" type="button" role="tab" aria-controls="d-pills-4" aria-selected="false">時尚名品</button>
+              <button class="nav-link p-xl-3" id="d-pills-5-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-5" type="button" role="tab" aria-controls="d-pills-5" aria-selected="false">美妝香氛</button>
+              <button class="nav-link p-xl-3" id="d-pills-6-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-6" type="button" role="tab" aria-controls="d-pills-6" aria-selected="false">健康生活</button>
+              <button class="nav-link p-xl-3" id="d-pills-7-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-7" type="button" role="tab" aria-controls="d-pills-7" aria-selected="false">美味食光</button>
+              <button class="nav-link p-xl-3" id="d-pills-8-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-8" type="button" role="tab" aria-controls="d-pills-8" aria-selected="false">開運珍藏</button>
+              <button class="nav-link p-xl-3" id="d-pills-9-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-9" type="button" role="tab" aria-controls="d-pills-9" aria-selected="false">潮流電玩</button>
+              <button class="nav-link p-xl-3" id="d-pills-10-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-10" type="button" role="tab" aria-controls="d-pills-10" aria-selected="false">日用清潔</button>
+              <button class="nav-link p-xl-3" id="d-pills-11-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-11" type="button" role="tab" aria-controls="d-pills-11" aria-selected="false">活動專區</button>
+            </div>
+          </div>
+          <!-- 中分類 -->
+          <div id="desktopNavDetection" class="position-absolute w-100 start-0 top-100 swiper-section">
+            <div class="d-flex container-xl g-0 p-0 bg-gainsboro custom-shadow">
+              <div class="tab-content w-100">
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-1" role="tabpanel" aria-labelledby="d-pills-1-tab">
+                  <!-- 旗艦館分類(swiper處理) -->
+                  <div id="swpFlagshipBrandInSubcategory" class="desktop-subcategory-swiper bg-light p-4 pb-2 position-relative">
+                    <div class="swiper-container pb-4">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-tvgame.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-普雷伊">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">普雷伊</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-dietu.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-大侑食尚生活">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">大侑食尚生活</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-huato.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-華陀扶元堂專館">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">華陀扶元堂專館</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-3m.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-3M生活">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">3M生活</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-hugodeco.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-榆果傢飾">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">榆果傢飾</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-hario.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-日本HARIO">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">日本HARIO</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-fbc.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-台塑生醫館">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">台塑生醫館</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-maison.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-藏寓">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">藏寓</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div> 
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-gourmets.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-聯馥食品專館">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">聯馥食品專館</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div> 
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-bohemian.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-波西米亞人">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">波西米亞人</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-luck.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-開運方程式">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">開運方程式</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-placeholder.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-placeholder">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">placeholder</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-placeholder.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-placeholder">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">placeholder</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-placeholder.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-placeholder">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">placeholder</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-2" role="tabpanel" aria-labelledby="d-pills-2-tab">
+                  <!-- 其他分類 -->
+                  <div class="desktop-subcategory w-100 bg-light p-4">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">TV熱銷快搜</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">主題強檔推薦</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">餐廚鍋具</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">餐廚用品</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">傢俱</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">床墊/床組</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">居家寢飾</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">家飾佈置</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">衛浴用品</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">收納晾曬</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">居家修繕</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">生活百貨</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">兒童寶貝館</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">運動/按摩</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">戶外休閒</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">寵物毛孩館</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">汽機車周邊</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【3M生活】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【WEDGWOOD】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【日本HARIO】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【榆果傢飾】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【輝葉】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【英萊斯克】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【法國利曼】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【RONA樂娜】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【西班牙Pulltex】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【BOHEMIA波西米亞】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">18禁專區</button>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-3" role="tabpanel" aria-labelledby="d-pills-3-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">質感家電子分類</button>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-4" role="tabpanel" aria-labelledby="d-pills-4-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">時尚名品子分類</button>
+                  </div>
+                </div>
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-5" role="tabpanel" aria-labelledby="d-pills-5-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">美妝香氛子分類</button>
+                  </div>
+                </div>
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-6" role="tabpanel" aria-labelledby="d-pills-6-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">健康生活子分類</button>
+                  </div>
+                </div>
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-7" role="tabpanel" aria-labelledby="d-pills-7-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">美味食光子分類</button>
+                  </div>
+                </div>
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-8" role="tabpanel" aria-labelledby="d-pills-8-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">開運珍藏子分類</button>
+                  </div>
+                </div>
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-9" role="tabpanel" aria-labelledby="d-pills-9-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">潮流電玩子分類</button>
+                  </div>
+                </div>
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-10" role="tabpanel" aria-labelledby="d-pills-10-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">日用清潔子分類</button>
+                  </div>
+                </div>
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-11" role="tabpanel" aria-labelledby="d-pills-11-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">活動專區子分類</button>
+                  </div>
+                </div>
+
+
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 麵包屑 NEW -->
+    <div class="border-bottom bg-light">
+      <div class="container-xl p-0">
+        <nav class="px-3 py-2 py-xl-3" aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="Home.html">首頁</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0);">知識文總覽</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0);">de Buyer</a></li>
+            <li class="breadcrumb-item active">原木鍋柄元素 廚房原木風</li>
+          </ol>
+        </nav>  
+      </div>
+    </div>
+
+
+    
+    <!-- 文章容器 -->
+    <article class="d-flex flex-column">
+      
+      <div class="container-fluid p-0">
+        <!-- 主圖片 -->
+        <div class="d-flex justify-content-center">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2560 436'%3E%3C/svg%3E" data-src="common/images/blogPost/deBuyer/2560x436.jpg" class="img-fluid lazy-load" width="2560" height="436">
+        </div>
+      </div>
+
+      <!-- 文章區塊 -->
+      <div class="container-xl bg-post p-3 fs-65 fs-xl-5 mb-3 mb-xl-4">
+        <div class="row g-0 justify-content-center">
+          <div class="col col-xl-10">
+            <!-- Brand Logo -->
+            <div class="d-flex justify-content-center brand-logo-container mb-2 mb-xl-3">
+              <div class="d-flex justify-content-center align-items-center rounded-circle bg-post position-relative brand-logo-inner">
+                <div class="rounded-circle overflow-hidden border brand-logo">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/blogPost/deBuyer/logo.jpg" class="img-fluid lazy-load" width="300" height="300">
+                </div>
+              </div>
+            </div>
+            <h1 class="text-center mb-3">原木鍋柄元素&ensp;廚房原木風</h1>            
+            <p class="mb-5">de Buyer畢耶嚴選來自Vosges森林的山毛櫸，取材到製程符合歐盟PEFC永續認證，以上下兩塊磨製後噴上一層蜂蠟，鑲鎖在抗耐熱的金屬握柄上，兼顧實耐用及為鍋具增添溫潤的手感及增加一般金屬合金握柄的防熱的效果。</p>
+            <div class="d-flex justify-content-center mb-4">
+              <figure class="figure">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 1'%3E%3C/svg%3E" data-src="common/images/blogPost/deBuyer/2600x.jpg" class="figure-img img-fluid lazy-load no-zoom-in" width="1200" height="400">
+                <figcaption class="figure-caption text-end fs-7">圖片來源：deBuyer官網</figcaption>
+              </figure>
+            </div>
+            <p>高質感原木握柄，鑲鎖在耐熱握柄上，兼具美觀溫潤手感及兼顧穩固實用性。圓形深煎平底鍋型，特殊鍋裙設計，非常適合用於煎炒、上色及炙燒料理。因西式料理習慣，畢耶平底鍋款無適用原廠鍋蓋建議。</p>
+            <p>MINERAL B原礦蜂蠟為畢耶鐵鍋的明星系列，鍋身最為厚實，款式最多元，最受專業廚師推薦與肯定及符合一般家庭多元鍋型需要。全新蜂蠟木柄系列讓喜愛鐵鍋的愛用者多一份木質設計元素，依舊符合天然環保的取材意念。</p>
+            <p>純度99.9%天然鐵鍋，導熱性佳，僅次於鍋具中最高導熱速度的銅鍋，卻有著與銅鍋相反的親民價格。畢耶特別設計的鍋身厚度，平均達2.5~4mm厚鐵，業界無其他鍋款能及的香酥梅納反應的爆發力，能快速鎖住肉排湯汁及蔬菜水，原味呈現的最佳鍋具。儘管使用專業快速爐或是感應爐也更不易變形，純精品質領導全球業界。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 視差背景 with png -->
+      <div class="parallax mb-3 mb-xl-4">
+        <div class="parallax-rect">
+          <div class="parallax-bg" style="background-image: url(common/images/blogPost/deBuyer/800x.jpg);"></div>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center position-relative" style="height: 100%; z-index: 999;">
+          <img src="common/images/blogPost/deBuyer/logo.png" class="img-fluid">
+        </div>
+      </div>
+
+      <!-- 文章區塊 -->
+      <div class="container-xl bg-post p-3 fs-65 fs-xl-5 mb-3 mb-xl-4">
+        <div class="row g-0 justify-content-center">
+          <div class="col col-xl-10">
+            <h3 class="text-center mb-4">系&emsp;列&emsp;特&emsp;色</h3>
+            <p>畢耶鐵鍋是一把完全不受火源溫度限制的鍋具，高溫烹煮不但不會傷害鍋子材質，反而可增加鐵鍋本身物理性不沾的優點，完全可取代傳統不沾鍋的優勢之外，無塗層更是不受限任何材質的鍋鏟使用。鐵鍋材質烹調效果佳、使用壽命長，無需一直換鍋環保且經濟實惠。使用鐵鍋料理有絕佳的焦糖化效果，輕鬆料理出酥脆表皮的各式肉類及快速鎖住食材水份的最佳鍋具材質選擇。在所有熱源爐具上都具有卓越的表現。</p>
+            <p class="mb-5">選用天然蜂蠟作為鐵鍋防鏽的素材，隔絕鍋具表層以防止氧化，完全符合畢耶環保的理念。(註記：蜂蠟的天然防鏽並非塗層，在商品運輸過程如有包裝磨擦處依然可能產生鏽漬，為正常現象，新鍋開鍋除鏽方式請詳下方使用教學)</p>
+            <h3 class="text-center mb-4">材&emsp;質</h3>
+            <ul class="ps-3 mb-3">
+              <li>鍋身：99.9%天然純鐵，非回收金屬。選用100%天然有機蜂蠟噴封，作為新鍋原裝出廠防鏽保護。</li>
+              <li>手柄：合金打造+山毛櫸</li>
+              <li>適用所有熱源，包括IH感應爐。烤箱10分鐘/200°C以下</li>
+              <li>注意事項：因西式料理習慣，畢耶平底鍋款無適用原廠鍋蓋建議。</li>
+              <li>產地: 100%法國製造</li>
+            </ul>
+            <!-- YouTube iframe -->
+            <div class="ratio ratio-16x9 mb-4">
+              <iframe src="https://www.youtube.com/embed/IMaiEzjLS_w?playsinline=1&controls=1&showinfo=1&rel=0&modestbranding=1&enablejsapi=0&autoplay=0&mute=1" allow="autoplay" allowfullscreen frameborder="0"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 顯示更多文章內容區塊 -->
+      <div id="readMore" class="collapse">
+        <div class="container-xl bg-post p-3 fs-65 fs-xl-5 mb-3 mb-xl-4">
+          <div class="row g-0 justify-content-center">
+            <div class="col col-xl-10">
+              <h2 class="text-center text-gold mb-4">鐵鍋必知二三事</h2>
+              <h4 class="text-center mb-3">鐵鍋非常適合用於煎炒、火烤、油炸及炙燒料理。</h4>
+              
+              <p class="mb-5">耐用的鐵鍋非常適合高溫烹飪，是市售唯一不因高溫而簡短使用壽命的鍋具材質，可以快速導熱並保持高溫，使料理有絕佳的焦糖化效果，鎖住食材原味，不論炙燒、火烤牛排、洋蔥、蔬菜、馬鈴薯，或是的高溫油炸料理，絕對是主廚唯一的首選。鐵鍋較不適用於燉煮或是需長時間高水份烹飪的料理。</p>
+              <h4 class="text-center mb-3">原鐵(碳鋼) vs 藍鐵？</h4>
+
+              <p>畢耶全鐵鍋系列不論銀灰或是藍黑色外觀，它們皆由大於99%的原鐵及小於1%的碳組成。</p>
+              <p>輕礦藍鐵＆里昂系列：簡稱藍鐵，是原鐵(碳鋼)在遇到足夠高溫的熱源，所形成四氧化三鐵的成色，原廠以天然方式減少氧化生鏽。與原礦蜂蠟系列鐵鍋不同的是，藍鐵系列沒有加以蜂蠟保護氧化。</p>
+              <p class="mb-5">原礦蜂蠟系列：採用99.9%原鐵礦，並以100%天然蜂蠟作為新鐵鍋外層防鏽的素材，隔絕鍋具表層以減少生鏽。</p>
+              
+              
+              <h2 class="text-center text-gold mb-4">de Buyer 鐵鍋系列比較</h2>
+              <h4 class="text-center mb-5">最薄、最輕、最便宜，鍋子越厚，對火侯的掌控越精準、持續時間更長。</h4>
+
+              <div class="d-flex justify-content-center mb-5">
+                <figure class="figure">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 1'%3E%3C/svg%3E" data-src="common/images/blogPost/deBuyer/spec-1.jpg" class="figure-img img-fluid lazy-load no-zoom-in">
+                  <figcaption class="figure-caption text-end fs-7">圖片來源：deBuyer官網</figcaption>
+                </figure>
+              </div>
+
+              <div class="d-flex justify-content-center mb-5">
+                <figure class="figure">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 1'%3E%3C/svg%3E" data-src="common/images/blogPost/deBuyer/spec-2.jpg" class="figure-img img-fluid lazy-load no-zoom-in">
+                  <figcaption class="figure-caption text-end fs-7">圖片來源：deBuyer官網</figcaption>
+                </figure>
+              </div>
+
+
+              <h2 class="text-center text-gold mb-4">原來這就是鐵鍋！？ 輕鬆養鍋自己來</h2>
+
+              <div class="d-flex justify-content-center mb-5">
+                <figure class="figure">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 1'%3E%3C/svg%3E" data-src="common/images/blogPost/deBuyer/step1-5.jpg" class="figure-img img-fluid lazy-load no-zoom-in">
+                  <figcaption class="figure-caption text-end fs-7">圖片來源：deBuyer官網</figcaption>
+                </figure>
+              </div>
+              <h4>(圖1～圖5)鐵鍋變色？初期洗鍋洗起來會黑黑的？</h4>
+              <p>鐵鍋變黑是個好現象，一般稱之為養鍋，表示鍋子產生了 ”物理性天然油膜”，鐵鍋越黑，不沾的保護作用越好，換言之，隨著使用次數增加，鐵鍋的性能越佳。另外在加熱的過程中，細菌會被高溫殺死，所以無須擔心其安全性。</p>
+              <p class="mb-5">物理性天然油膜 : 當鐵 ( FE ) 同時遇上” 高溫” 及” 氧(O)” ，會產生化學式FE3O4四氧化三鐵，鐵成分越精純，此生成反應越明顯，此油墨完全無礙人體健康，初期擦拭紙巾會黑黑的，其來自鐵的本色及FC3O4的顏色，隨著食用油烹煮，碳化反映成熟後，鍋面擦拭就不會再黑了，若仍有，多半會是您加入的食用油受熱後的油色。或是初期烹煮油膜尚未穩定時，烹煮高水份食材，菜汁會偏黑，洗鍋也會將不穩定油膜洗掉產生的暫時性現象。</p>
+
+              <div class="d-flex justify-content-center mb-5">
+                <figure class="figure">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 1'%3E%3C/svg%3E" data-src="common/images/blogPost/deBuyer/step6.jpg" class="figure-img img-fluid lazy-load no-zoom-in">
+                  <figcaption class="figure-caption text-end fs-7">圖片來源：deBuyer官網</figcaption>
+                </figure>
+              </div>
+
+              <h4>如何保養及清理我的鐵鍋？</h4>
+              <p>鍋子隨著使用時間越長，其性能也會越好，會自然地達到養鍋的效果。以下為養鍋的注意事項。</p>
+              <h5>避免事項：</h5>
+              <ol>
+                <li>勿使用洗碗機、肥皂或洗碗精等洗滌劑</li>
+                <li>勿烹煮酸性食物（檸檬、番茄、醋）。會產生視覺上較大面積的油膜脫落，一般烹煮是不會有此情形，油墨消失僅是暫時現象，只需再次養鍋，無壞鍋的疑慮，將鐵鍋刷洗乾淨後，再次加熱就會慢慢變回黑色。</li>
+              </ol>
+
+              <h4>初次使用必須開鍋</h4>
+              <p>原廠建議簡單使用70度以上的熱水，搭配海綿將表層蜂蠟刷除後，放回爐具，燒乾鍋中水分後，即可關火抹上一層薄薄的植物油，潤滑鍋子的內外，並將其放置在乾燥的地方，防止氧化。</p>
+              <p>如消費者要另選擇仿間長時間燒黑鍋以為養鍋，請務必待關火後鍋子溫度降低再抹油，才不會延生因油焦黃燒焦，誤以為鍋子壞掉的疑慮</p>
+
+              <h4>養鍋</h4>
+              <ol class="mb-5">
+                <li>使用海綿或金屬刷具較方便清洗，如有必要，可搭配熱水將殘留物清除。</li>
+                <li>鍋可倒入水煮沸去除鐵鍋上的油脂。</li>
+                <li>可搭配鍋鏟將油垢剷除，最後沖洗乾淨後請燒乾鍋子。</li>
+                <li>使用廚房紙巾搭配幾滴食用油，輕輕擦拭鐵鍋內外後，將其置於乾燥的地方。</li>
+              </ol>
+
+              <div class="d-flex justify-content-center mb-5">
+                <figure class="figure">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 1'%3E%3C/svg%3E" data-src="common/images/blogPost/deBuyer/step7-8.jpg" class="figure-img img-fluid lazy-load no-zoom-in">
+                  <figcaption class="figure-caption text-end fs-7">圖片來源：deBuyer官網</figcaption>
+                </figure>
+              </div>
+
+              <h4>鐵鍋生鏽一定洗的掉嗎？如何洗？</h4>
+              <p>一定洗的掉。未充分養鍋的鐵鍋會自然生鏽，是因為它們含有高達99%的原鐵，而鐵是一種天然、無毒、且人體所需的元素，即使生鏽也很容易清除，所以無須擔心會對健康造成傷害，其唯一的缺點暫時的鏽點只是不美觀。若您的鐵鍋已充分養鍋，表面仍有一些鏽漬，建議以熱水搭配金屬刷具，僅擦拭鏽漬點，避免刷除養鍋產生的物理性天然油膜。</p>
+              <h5>另針對其他狀況，提供您幾個清除生鏽的訣竅：</h5>
+              <ol class="mb-5">
+                <li>使用天然的酸：將檸檬汁或醋塗生鏽處 ( 若加入鹽或是小蘇打會有更好的效果 )，輕微鏽點以刷具沾醋或檸檬汁稍微用力即可刷除，大面積或較深的鏽漬可稍作浸泡後搭配刷具刷除，加水會稀釋醋的濃度影響除鏽效果，請視個人狀況斟酌。</li>
+                <li>使用馬鈴薯＋小蘇打：將馬鈴薯對半切，切面沾上小蘇打，擦拭鐵鍋生鏽處，接著沖洗並反覆進行，直到生鏽消失。</li>
+                <li>若是嚴重的生鏽，建議添購檸檬酸，或是除鏽劑，就可以快速刷除。</li>
+              </ol>
+
+              <div class="d-flex justify-content-center mb-5">
+                <figure class="figure">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 1'%3E%3C/svg%3E" data-src="common/images/blogPost/deBuyer/step9.jpg" class="figure-img img-fluid lazy-load no-zoom-in">
+                  <figcaption class="figure-caption text-end fs-7">圖片來源：deBuyer官網</figcaption>
+                </figure>
+              </div>
+
+              <h4>全新的鐵鍋生鏽了？</h4>
+              <p class="mb-5">de Buyer 的每個鐵鍋原鐵程度高達99%以上，因無塗層，故無法完全隔絕，因空氣中的濕氣 ( 亞洲的潮濕氣候所致 ) 而產生的鏽漬。de Buyer 在出廠前，會以專利技術，噴上100%有機蜂蠟，採用無汙染方式防鏽，在鐵鍋運送過程或是在倉庫保存時，若遇到溫差，易造成蜂蠟軟化摩擦，被外包裝紙袋吸附，出現新鍋局部鏽漬。鐵鍋生鏽屬於正常現象，容易清洗，並絕不危害健康，也非商品品質瑕疵，若未來使用養鍋也會避免生鏽。若您不因新鐵鍋的生鏽，而將商品退貨，我們將十分感謝您願意花時間理解商品特質。</p>
+
+              <div class="d-flex justify-content-center mb-5">
+                <figure class="figure">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 1'%3E%3C/svg%3E" data-src="common/images/blogPost/deBuyer/step10.jpg" class="figure-img img-fluid lazy-load no-zoom-in">
+                  <figcaption class="figure-caption text-end fs-7">圖片來源：deBuyer官網</figcaption>
+                </figure>
+              </div>
+
+              <h4>如何使鐵鍋產生不沾的效果？</h4>
+              <p class="mb-5">放入食材之前，加熱使鐵鍋達到一定溫度，溫度夠就會有不沾效果。烹煮時可以滴水測試溫度，水珠呈現滾動狀態即溫度夠，轉小火再下油不沾效果最佳，料理會有絕佳的焦糖化效果；若仍有沾黏情況，可能是因為您未養鍋，或在鐵鍋未達最佳溫度前，就將食材放入導致。</p>
+
+              <div class="d-flex justify-content-center mb-5">
+                <figure class="figure">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 1'%3E%3C/svg%3E" data-src="common/images/blogPost/deBuyer/step11-12.jpg" class="figure-img img-fluid lazy-load no-zoom-in">
+                  <figcaption class="figure-caption text-end fs-7">圖片來源：deBuyer官網</figcaption>
+                </figure>
+              </div>
+
+              <h4>我的de Buyer鐵鍋煮壞了嗎？</h4>
+              <p>烹煮時隨著水分多寡與食材不同，部分鍋面會有深淺黑光暈或點狀現象，其乃原鐵受熱時產生，由於每位消費者家中使用鍋具及火侯不同，因此鍋子的花臉程度會不一，為正常現象。</p>
+
+              <h4>為何我鍋底變形不平呢？</h4>
+              <p>所有de Buyer鐵鍋的底面都略呈凸形彎曲，以確保在強大的加熱源（尤其是感應加熱）上使用時具有很高的穩定性。這種凸曲線可防止鍋變形，並且不會破壞鍋的烹飪性能。電磁爐有出眾高速的加熱性能，使用鐵鍋時，必須：</p>
+              <ul class="mb-5">
+                <li>在中等溫度下煮。</li>
+                <li>避免使用Powerboost功能。</li>
+                <li>避免在鐵鍋倒空時使其過熱。</li>
+                <li>這些注意事項對於鍋底直徑（非鍋子大小）不超過 26cm的鍋具至關重要否則可能產生即時變形，高於 26cm鍋具也是需要遵守上面三個注意事項，以免長期使用避免變形。</li>
+              </ul>
+
+              <h2 class="text-center text-gold mb-4">de Buyer 鍋具材質比較</h2>
+
+              <div class="d-flex justify-content-center">
+                <figure class="figure">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 1'%3E%3C/svg%3E" data-src="common/images/blogPost/deBuyer/comparison.jpg" class="figure-img img-fluid lazy-load no-zoom-in">
+                  <figcaption class="figure-caption text-end fs-7">圖片來源：deBuyer官網</figcaption>
+                </figure>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-xl p-3 fs-65 fs-xl-5 mb-3 mb-xl-4">
+        <div class="row g-0 justify-content-center">
+          <div class="col-12 col-lg-3">
+            <button id="btnReadMore" class="btn btn-outline-secondary rounded-0 w-100 p-3" type="button" data-bs-toggle="collapse" data-bs-target="#readMore" onclick="readMore()">顯示更多文章內容</button>
+          </div>
+        </div>
+      </div>
+
+
+    </article>
+    
+      
+
+    <div class="container-xl p-0 mb-3 mb-xl-5">
+      <div class="row g-0 justify-content-center">
+        <div class="col col-xl-12">
+          <!-- 社群分享按鈕 -->  
+          <div class="d-flex flex-column p-2 bg-secondary">
+            <div class="d-flex justify-content-around p-2">
+              <div class="d-flex"><button class="btn p-2 rounded-circle" type="button"><span class="feather icon-brand-line icon-white align-middle fs-4"></span></button></div>
+              <div class="d-flex"><button class="btn p-2 rounded-circle" type="button"><span class="feather icon-brand-facebook icon-white align-middle fs-4"></span></button></div>
+              <div class="d-flex"><button class="btn p-2 rounded-circle" type="button"><span class="feather icon-mail icon-white align-middle fs-4"></span></button></div>
+              <div class="d-flex"><button class="btn p-2 rounded-circle" type="button"><span class="feather icon-link icon-white align-middle fs-4"></span></button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-3 fw-bold text-center fs-5">推&ensp;薦&ensp;商&ensp;品</div>
+
+    <!-- 整合功能列(排序篩選) -->
+    <div id ="functionBar" class="d-flex flex-column sticky-top-nav-m">
+      <!-- 用來偵測整塊#functionBar是否為sticky狀態 -->
+      <div class="function-bar-observer"></div>
+      <!-- 切換顯示模式 & 排序/篩選 -->
+      <div class="d-flex container-xl p-1 p-xl-2 justify-content-between position-relative">
+        <!-- 切換顯示模式 -->
+        <div class="d-flex">
+          <button id="toggleGrid" class="btn active" type="button" data-toggle-view="grid-view" data-target="#productList"><span class="feather icon-grid"></span></button>
+          <button id="toggleList" class="btn" type="button" data-toggle-view="list-view" data-target="#productList"><span class="feather icon-list"></span></button>
+        </div>
+        <!-- 排序/篩選 -->
+        <div class="d-flex">
+          <button id="toggleSort" class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#productSort"><span class="feather icon-bar-chart me-1"></span><span class="fs-7 fs-xl-6">排序</span></button>
+          <button id="toggleFilter" class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#productFilter"><span class="feather icon-filter me-1"></span><span class="fs-7 fs-xl-6">篩選</span></button>
+          <!-- 排序選單 -->
+          <div id="productSort" data-bs-parent="#functionBar" class="collapse position-absolute top-100 end-0 mt-m1px col-12 col-md-6 col-xl-3">
+            <div class="bg-white border border-danger shadow p-2 mx-2">
+              <div class="d-flex flex-column">
+                <!-- header -->
+                <div class="d-flex justify-content-between border-bottom p-2 mb-2">
+                  <div class="fs-6">商品排序</div>
+                  <button type="button" class="btn-close" data-bs-toggle="collapse" data-bs-target="#productSort" aria-label="Close"></button>
+                </div>
+                <!-- body -->
+                <div class="d-flex flex-column border-bottom mb-2">
+                  <div class="d-flex mb-2">
+                    <div class="d-flex flex-shrink-0 align-items-center p-2">上架日期</div>  
+                    <div class="d-flex flex-grow-1 p-2">                  
+                      <div class="btn-group">
+                        <input type="radio" class="btn-check" name="sortGroup" id="btnNewToOld" autocomplete="off">
+                        <label class="btn btn-outline-secondary fs-65" for="btnNewToOld">新→舊</label>
+                        <input type="radio" class="btn-check" name="sortGroup" id="btnOldToNew" autocomplete="off">
+                        <label class="btn btn-outline-secondary fs-65" for="btnOldToNew">舊→新</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-shrink-0 mb-2">
+                    <div class="d-flex align-items-center p-2">價格高低</div>  
+                    <div class="d-flex flex-grow-1 p-2">                  
+                      <div class="btn-group">
+                        <input type="radio" class="btn-check" name="sortGroup" id="btnHighToLow" autocomplete="off">
+                        <label class="btn btn-outline-secondary fs-65" for="btnHighToLow">高→低</label>
+                        <input type="radio" class="btn-check" name="sortGroup" id="btnLowToHigh" autocomplete="off">
+                        <label class="btn btn-outline-secondary fs-65" for="btnLowToHigh">低→高</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- footer -->
+                <div class="d-flex p-2">
+                  <div class="btn-group w-100">
+                    <button class="btn btn-outline-secondary" type="button" onclick="removeSort()">清除</button>
+                    <button class="btn btn-outline-secondary" type="button" onclick="confirmSort()">確認</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 篩選選單 -->
+          <div id="productFilter" data-bs-parent="#functionBar" class="collapse position-absolute top-100 end-0 mt-m1px col-12 col-md-6 col-xl-4">
+            <div class="bg-white border border-danger shadow p-2 mx-2">
+              <div class="d-flex flex-column">
+                <!-- header -->
+                <div class="d-flex justify-content-between border-bottom p-2 mb-2">
+                  <div class="fs-6">商品篩選</div>
+                  <button type="button" class="btn-close" data-bs-toggle="collapse" data-bs-target="#productFilter" aria-label="Close"></button>
+                </div>
+                <!-- body -->
+                <div class="d-flex flex-column border-bottom mb-2">
+                  <div class="d-flex flex-wrap p-2 pb-3 mb-2 border-bottom">
+
+                    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                    <label class="btn btn-outline-secondary m-1 fs-65" for="btncheck1">新上架</label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                    <label class="btn btn-outline-secondary m-1 fs-65" for="btncheck2">結帳折100</label>
+
+                  </div>
+                  <div class="d-flex mb-2">
+                    <div class="d-flex flex-shrink-0 align-items-center p-2">價格區間</div>  
+                    <div class="d-flex flex-grow-1 p-2">                  
+                      <div class="input-group">
+                        <input class="form-control" type="number" name="" placeholder="最低價">
+                        <span class="input-group-text">到</span>
+                        <input class="form-control" type="number" name="" placeholder="最高價">
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <!-- footer -->
+                <div class="d-flex p-2">
+                  <div class="btn-group w-100">
+                    <button class="btn btn-outline-secondary" type="button" onclick="removeFilter()">清除</button>
+                    <button class="btn btn-outline-secondary" type="button" onclick="confirmFilter()">確認</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品 -->
+    <div class="d-flex flex-column container-xl p-0 mt-m1px">
+      
+      
+      <!-- 商品列表 -->
+      <div id="productList" class="d-flex grid-view mb-3 mb-xl-5">
+        
+        <div class="w-100 row row-cols-2 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 p-1 g-0">
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3060232022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">8折</div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">de Buyer 畢耶 原礦蜂蠟系列 中華北京快炒鍋32cm/鐵鍋</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">2900</div> 
+                        <div class="p-1 o-price">3600</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3059432022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <!-- <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">8折</div> -->
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">買一送一!! de Buyer 畢耶 原礦蜂蠟系列 傳統單柄迷你煎餅鍋12cm/鐵鍋 (VIVA 獨家)</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">1090</div> 
+                        <!-- <div class="p-1 o-price">3600</div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3047702022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">88折</div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">de Buyer 畢耶 輕礦藍鐵系列 單柄平底鍋32cm/鐵鍋</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">2446</div> 
+                        <div class="p-1 o-price">2780</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3048012022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">88折</div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">de Buyer 畢耶 原礦蜂蠟活動柄系列 平底鍋28cm/鐵鍋</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">2592</div> 
+                        <div class="p-1 o-price">2945</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3048232022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">88折</div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">de Buyer 畢耶 原礦木柄蜂蠟系列 法式可麗餅鍋24cm/鐵鍋</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">1615</div> 
+                        <div class="p-1 o-price">1835</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3047992022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">88折</div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">de Buyer 畢耶 原礦蜂蠟活動柄系列 平底鍋20cm/鐵鍋</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">1496</div> 
+                        <div class="p-1 o-price">1700</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3048252022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">88折</div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">de Buyer 畢耶 原礦木柄蜂蠟系列 單柄中華炒鍋32cm/鐵鍋(附握耳)</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">3230</div> 
+                        <div class="p-1 o-price">3670</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3048372022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">88折</div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">de Buyer 畢耶 原礦蜂蠟活動柄系列 活動握柄-紅色</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">862</div> 
+                        <div class="p-1 o-price">980</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3048212022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">88折</div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">de Buyer 畢耶 原礦木柄蜂蠟系列 單柄3格鬆餅鍋27cm/鐵鍋</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">2165</div> 
+                        <div class="p-1 o-price">2460</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3048202022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">88折</div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">de Buyer 畢耶 原礦木柄蜂蠟系列 傳統單柄平底鍋32cm/鐵鍋(附握耳)</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">3133</div> 
+                        <div class="p-1 o-price">3560</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3048002022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">88折</div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">de Buyer 畢耶 原礦蜂蠟活動柄系列 平底鍋24cm/鐵鍋</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">1839</div> 
+                        <div class="p-1 o-price">2090</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3048162022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">88折</div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">de Buyer 畢耶 原礦木柄蜂蠟系列 傳統單柄平底鍋20cm/鐵鍋</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">1910</div> 
+                        <div class="p-1 o-price">2170</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3048192022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">79折</div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">de Buyer 畢耶 原礦木柄蜂蠟系列 傳統單柄平底鍋28cm/鐵鍋</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">2580</div> 
+                        <div class="p-1 o-price">3280</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3048342022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">88折</div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">de Buyer 畢耶 原礦蜂蠟活動柄系列 活動握柄-黑色</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">862</div> 
+                        <div class="p-1 o-price">980</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3048122022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">88折</div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">de Buyer 畢耶 原礦蜂蠟系列 職人防滑握柄平底鍋24cm/鐵鍋</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">2741</div> 
+                        <div class="p-1 o-price">3115</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3048112022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">88折</div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">de Buyer 畢耶 原礦蜂蠟系列 職人防滑握柄平底鍋20cm/鐵鍋</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">2350</div> 
+                        <div class="p-1 o-price">2670</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3048132022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">88折</div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">de Buyer 畢耶 原礦蜂蠟系列 職人防滑握柄平底鍋28cm/鐵鍋</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">3133</div> 
+                        <div class="p-1 o-price">3560</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col item p-1 p-lg-2">
+            <a href="productPage.html">
+              <div class="p-2 bg-white shadow-sm">
+                <div class="d-flex bg-white item-body">
+                  <div class="d-flex position-relative item-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://www.vivatv.com.tw/common/images/product/3048032022/1.jpg" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">88折</div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-between item-info">
+                    <div class="p-1 p-name-2 mb-1">de Buyer 畢耶 原礦蜂蠟活動柄系列 可麗餅鍋26cm/鐵鍋</div>                 
+                    <div class="d-flex justify-content-between item-price">
+                      <div class="d-flex mb-1 mb-xl-2">
+                        <div class="p-1 p-price">1918</div> 
+                        <div class="p-1 o-price">2180</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- 看更多商品 -->
+      <!-- <div class="d-flex justify-content-center mb-3 mb-xl-5">
+        <div class="col-12 col-md-8 col-xl-6 px-3">
+          <button class="btn btn-outline-secondary rounded-pill w-100 fs-6 fs-xl-5" type="button" onclick="loadMoreTestItem()">看更多商品</button>
+        </div>
+      </div> -->
+    </div>
+          
+
+  </main>
+
+
+
+  
+  	
+	
+
+	<!-- footer NEW -->
+  <footer>
+    <div class="bg-gainsboro p-3 pt-4 py-xl-4 pt-xl-5">
+      <div class="container-xl">
+        <div class="row row-cols-2 row-cols-xl-4">
+          <div class="col">
+            <h6>關於我們</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="aboutCompany.html">企業資訊</a></li>
+              <li class="mb-2"><a href="businessPartner.html">廠商合作</a></li>
+              <li class="mb-2"><a href="https://www.104.com.tw/company/dc7d2u8" target="_blank">企業徵才</a></li>
+              <li class="mb-2"><a href="https://www.instagram.com/vivatvsh/?hl=zh-tw" target="_blank">主持群</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h6>售後服務</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="memberFAQ.html#faqCollapse-5">取消/換貨/退貨</a></li>
+              <li class="mb-2"><a href="memberFAQ.html#faqCollapse-6">商品鑑賞期</a></li>
+              <li class="mb-2"><a href="invoiceFAQ.html">電子發票</a></li>
+              <li class="mb-2"><a href="guestMessage.html">聯絡我們</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h6>常見問題</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="memberFAQ.html">新手上路</a></li>
+              <li class="mb-2"><a href="shoppingGuide.html">購物指南</a></li>
+              <li class="mb-2"><a href="couponFAQ.html">優惠金使用說明</a></li>
+<li class="mb-2"><a href="memberNewRule.html">會員分級新制辦法</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h6>會員權益</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="privacyPolicy.html">隱私權保護政策</a></li>
+              <li class="mb-2"><a href="lawStatement.html">個資保護專區</a></li>
+              <li class="mb-2"><a href="audienceReport.html">閱聽人意見服務報告</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-independence py-3">
+      <div class="container-xl">
+        <div class="row">
+          <div class="col d-flex flex-column flex-xl-row justify-content-center align-items-center text-white fs-75">
+            <div class="mx-1">美好家庭購物股份有限公司版權所有</div>
+            <div>&copy;2020 Shopnet Homeshopping co., Ltd. All Rights Reserved.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 下方導覽列 NEW -->
+  <div id="bottomNavNew" class="position-fixed bg-dark-theme py-xl-3 shadow-lg">
+    <div id="bottomNavGrid">
+
+      
+      <div id="History" class="collapse fade w-100 bg-light overflow-hidden">
+        <div class="d-flex d-xl-none justify-content-xl-center p-3 pb-1 fs-75">瀏覽紀錄</div>
+        <div id="swpHistory" class="d-flex p-3 pt-1 p-xl-1 p-xxl-2 position-relative">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="productPage.html">
+                  <div class="d-flex flex-column">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/300/300" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="p-1 p-price d-block d-xl-none">2280</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="productPage.html">
+                  <div class="d-flex flex-column">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/300/300" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="p-1 p-price d-block d-xl-none">2280</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="productPage.html">
+                  <div class="d-flex flex-column">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/300/300" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="p-1 p-price d-block d-xl-none">2280</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="productPage.html">
+                  <div class="d-flex flex-column">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/300/300" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="p-1 p-price d-block d-xl-none">2280</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="productPage.html">
+                  <div class="d-flex flex-column">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/300/300" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="p-1 p-price d-block d-xl-none">2280</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="productPage.html">
+                  <div class="d-flex flex-column">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/300/300" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="p-1 p-price d-block d-xl-none">2280</div>
+                  </div>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="vertical-button-prev"><span class="feather icon-chevron-up"></span></div>
+          <div class="vertical-button-next"><span class="feather icon-chevron-down"></span></div>
+        </div>
+      </div>
+      
+
+      <div id="bottomNavBtn1" class="d-flex justify-content-center py-xl-1 py-xxl-2" title="瀏覽紀錄">
+        <button id="toggleHistory" class="d-flex flex-column align-items-center justify-content-center btn text-white rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#History"><span class="feather icon-clock"></span><span class="d-inline d-xl-none d-xxl-inline fs-75">瀏覽紀錄</span></button>
+      </div>
+
+      <div id="bottomNavBtn2" class="d-flex justify-content-center py-xl-1 py-xxl-2" title="刷卡優惠">
+        <button id="toggleCardCampaign" class="d-inline-flex flex-column align-items-center justify-content-center btn text-white rounded-0" type="button"><span class="feather icon-credit-card"></span><span class="d-inline d-xl-none d-xxl-inline fs-75">刷卡優惠</span></button>
+      </div>
+
+      <div id="bottomNavBtn3" class="d-flex justify-content-center py-xl-1 py-xxl-2" title="訂單查詢">
+        <button id="toggleOrderTracking" class="d-inline-flex flex-column align-items-center justify-content-center btn text-white rounded-0" type="button" onclick="location.href='orderTracking.html'"><span class="feather icon-file-text"></span><span class="d-inline d-xl-none d-xxl-inline fs-75">訂單查詢</span></button>
+      </div>
+      
+      <div id="bottomNavBtn4" class="d-flex justify-content-center py-xl-1 py-xxl-2" title="會員專區">
+        <button id="toggleMemberSection" class="d-inline-flex flex-column align-items-center justify-content-center btn text-white rounded-0" type="button" onclick="location.href='memberPortal.html'"><span class="feather icon-user"></span><span class="d-inline d-xl-none d-xxl-inline fs-75">會員專區</span></button>
+      </div>
+      
+      <div id="bottomNavBtn5" class="d-none justify-content-center d-xl-flex py-xl-1 py-xxl-2" title="TOP">
+        <button id="scrollToTopDesktop" class="d-inline-flex flex-column align-items-center justify-content-center btn text-white rounded-0" type="button"><span class="feather icon-chevron-up"></span><span class="d-inline d-xl-none d-xxl-inline fs-75">&emsp;TOP&emsp;</span></button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 提示訊息：請先選擇規格 -->
+  <div id="specConfirm" class="snackbar bg-dark text-white rounded-3">
+    <div class="d-flex flex-column p-3">
+      <div class="d-flex justify-content-center"><span class="feather icon-alert-circle fs-1"></span></div>
+      <div class="d-flex justify-content-center">請先選擇規格</div>
+    </div>
+  </div>
+  <!-- 提示訊息：已加入購物車 -->
+  <div id="cartAdded" class="snackbar bg-dark text-white rounded-3">
+    <div class="d-flex flex-column p-3">
+      <div class="d-flex justify-content-center"><span class="feather icon-check-circle fs-1"></span></div>
+      <div class="d-flex justify-content-center">已加入購物車</div>
+    </div>
+  </div>
+  <!-- 提示訊息：已從購物車移除 -->
+  <div id="cartRemoved" class="snackbar bg-dark text-white rounded-3">
+    <div class="d-flex flex-column p-3">
+      <div class="d-flex justify-content-center"><span class="feather icon-trash fs-1"></span></div>
+      <div class="d-flex justify-content-center">已從購物車移除</div>
+    </div>
+  </div>
+  <!-- 提示訊息：已加入收藏 -->
+  <div id="favAdded" class="snackbar bg-dark text-white rounded-3">
+    <div class="d-flex flex-column p-3">
+      <div class="d-flex justify-content-center"><span class="feather icon-heart fs-1"></span></div>
+      <div class="d-flex justify-content-center">已加入收藏</div>
+    </div>
+  </div>
+  <!-- 提示訊息：已移除收藏 -->
+  <div id="favRemoved" class="snackbar bg-dark text-white rounded-3">
+    <div class="d-flex flex-column p-3">
+      <div class="d-flex justify-content-center"><span class="feather icon-trash fs-1"></span></div>
+      <div class="d-flex justify-content-center">已移除收藏</div>
+    </div>
+  </div>
+
+  <!-- 購物車(有商品情況) --> 
+  <div class="modal fade" id="shoppingCart" tabindex="-1" aria-labelledby="shoppingCart" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content rounded-0">
+        <div class="modal-header">
+          <span class="modal-title fs-6">購物車</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="shoppingCartList" class="modal-body p-2">
+          <!-- 商品 -->
+          <div class="d-flex flex-column p-3 cart-item">
+            <!-- 商品圖、品名、折扣 -->
+            <div class="d-flex pb-2">
+              <div class="col-3"><a href="productPage.html"><img src="https://www.vivatv.com.tw/common/images/product/2948862020/1.jpg" class="img-fluid"></a></div>
+              <div class="d-flex col-9">
+                <div class="d-flex flex-column justify-content-between">
+                  
+                  <div class="px-2 pb-1 p-name-1">ISA KNOX車醫院活性幹細胞熱銷回饋組123456</div>
+                  <div class="d-inline px-2 pb-1">規格：<span>無</span></div>
+                  <div class="d-flex flex-wrap align-items-center ps-2 pe-0 fs-6">
+                    <div class="bg-discount lh-1 pe-2 px-2 py-2 text-white fs-7">85折</div>
+                    <div class="px-2 py-1 m-1 rounded border fs-7">第二件起79折($5214)</div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <!-- 數量、小計、加入收藏、刪除 -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center select-quantity" data-price="6600">
+                <div class="d-flex me-2">
+                  <div class="input-group">
+                    <label class="input-group-text fs-7">數量</label>
+                    <select class="form-select fs-7">
+                      <option value="1" selected>1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="d-flex"><span class="me-1">小計</span><span class="fs-6 p-price lh-1 pe-2 subtotal">6600</span></div>
+              </div>
+              <div class="d-flex">
+                <div class="input-group">
+                  <button class="btn" type="button" onclick="toggleFav(this)" data-fav="false"><span class="feather icon-heart"></span></button>
+                  <button class="btn pe-0" type="button" onclick="removeFromCart(this);"><span class="feather icon-trash-2"></span></button>
+                </div>  
+              </div>
+            </div>
+          </div>
+          <!-- 商品 -->
+          <div class="d-flex flex-column p-3 cart-item">
+            <!-- 商品圖、品名、折扣 -->
+            <div class="d-flex pb-2">
+              <div class="col-3"><a href="productPage.html"><img src="https://www.vivatv.com.tw/common/images/product/2965992021/1.jpg" class="img-fluid"></a></div>
+              <div class="d-flex col-9">
+                <div class="d-flex flex-column justify-content-between">
+                  
+                  <div class="px-2 pb-1 p-name-1">日本藤田Comfit涼感透氣支撐床墊-加大</div>
+                  <div class="d-inline px-2 pb-1">規格：<span>無</span></div>
+                  <div class="d-flex flex-wrap align-items-center ps-2 pe-0 fs-6">
+                    <div class="px-2 py-1 m-1 rounded border fs-7">結帳折100</div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <!-- 數量、小計、加入收藏、刪除 -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center select-quantity" data-price="3570"> 
+                <div class="d-flex me-2">
+                  <div class="input-group">
+                    <label class="input-group-text fs-7">數量</label>
+                    <select class="form-select fs-7">
+                      <option value="1" selected>1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="d-flex"><span class="me-1">小計</span><span class="fs-6 p-price lh-1 pe-2 subtotal">3570</span></div>
+              </div>
+              <div class="d-flex">
+                <div class="input-group">
+                  <button class="btn" type="button" onclick="toggleFav(this)" data-fav="false"><span class="feather icon-heart"></span></button>
+                  <button class="btn pe-0" type="button" onclick="removeFromCart(this);"><span class="feather icon-trash-2"></span></button>
+                </div>  
+              </div>
+            </div>
+          </div>
+          <!-- 商品 -->
+          <div class="d-flex flex-column p-3 cart-item">
+            <!-- 商品圖、品名、折扣 -->
+            <div class="d-flex pb-2">
+              <div class="col-3"><a href="productPage.html"><img src="https://www.vivatv.com.tw/common/images/product/2969292021/1.jpg" class="img-fluid"></a></div>
+              <div class="d-flex col-9">
+                <div class="d-flex flex-column justify-content-between">
+                  
+                  <div class="px-2 pb-1 p-name-1">TAKURA田倉零重力全包覆溫揉按摩椅</div>
+                  <div class="d-flex px-2 pb-1">規格：<span>白+橘</span></div>
+                  <div class="d-flex flex-wrap align-items-center ps-2 pe-0 fs-6">
+                    <div class="px-2 py-1 m-1 rounded border fs-7">結帳折100</div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <!-- 數量、小計、加入收藏、刪除 -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center select-quantity" data-price="23800">
+                <div class="d-flex me-2">
+                  <div class="input-group">
+                    <label class="input-group-text fs-7">數量</label>
+                    <select class="form-select fs-7">
+                      <option value="1" selected>1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="d-flex"><span class="me-1">小計</span><span class="fs-6 p-price lh-1 pe-2 subtotal">23800</span></div>
+              </div>
+              <div class="d-flex">
+                <div class="input-group">
+                  <button class="btn" type="button" onclick="toggleFav(this)" data-fav="false"><span class="feather icon-heart"></span></button>
+                  <button class="btn pe-0" type="button" onclick="removeFromCart(this);"><span class="feather icon-trash-2"></span></button>
+                </div>  
+              </div>
+            </div>
+          </div>
+          <!-- 商品 -->
+          <div class="d-flex flex-column p-3 cart-item">
+            <!-- 商品圖、品名、折扣 -->
+            <div class="d-flex pb-2">
+              <div class="col-3"><a href="productPage.html"><img src="https://www.vivatv.com.tw/common/images/product/2933932020/1.jpg" class="img-fluid"></a></div>
+              <div class="d-flex col-9">
+                <div class="d-flex flex-column justify-content-between">
+                  
+                  <div class="px-2 pb-1 p-name-1">雅詩蘭黛 明星特潤小棕瓶全新升級版</div>
+                  <div class="d-inline px-2 pb-1">規格：<span>無</span></div>
+                  <div class="d-flex flex-wrap align-items-center ps-2 pe-0 fs-6">
+                    <div class="px-2 py-1 m-1 rounded border fs-7">結帳折100</div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <!-- 數量、小計、加入收藏、刪除 -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center select-quantity" data-price="7990">
+                <div class="d-flex me-2">
+                  <div class="input-group">
+                    <label class="input-group-text fs-7">數量</label>
+                    <select class="form-select fs-7">
+                      <option value="1" selected>1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="d-flex"><span class="me-1">小計</span><span class="fs-6 p-price lh-1 pe-2 subtotal">7990</span></div>
+              </div>
+              <div class="d-flex">
+                <div class="input-group">
+                  <button class="btn" type="button" onclick="toggleFav(this)" data-fav="false"><span class="feather icon-heart"></span></button>
+                  <button class="btn pe-0" type="button" onclick="removeFromCart(this);"><span class="feather icon-trash-2"></span></button>
+                </div>  
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+        <div class="modal-footer p-2 pt-0">
+          <div class="d-flex flex-column w-100">
+            <div class="d-flex justify-content-between align-items-center p-2 fs-6">
+              <div class="d-flex align-items-center">
+                <span>共</span>
+                <span class="text-danger mx-2 fs-5" id="cartItemAmount"></span>
+                <span>件商品</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <span>合計</span>
+                <span class="p-price mx-1 fs-5" id="Total"></span>  
+              </div>
+            </div>
+            <div class="d-flex justify-content-between flex-column">
+              
+              <button type="button" class="btn btn-danger rounded-pill m-1" onclick="location.href='checkOut1.html'">下一步</button>
+              <button type="button" class="btn btn-outline-secondary rounded-pill m-1" data-bs-dismiss="modal">繼續購物</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	
+
+	
+
+	
+
+	
+
+</div>
+
+<!-- JS -->
+<script src="common/bootstrap-5.0.0-beta3-dist/js/bootstrap.bundle.js"></script>
+<script src="common/js/jquery-1.11.3.min.js"></script>
+<script src="common/js/swiper-bundle.min.js"></script>
+<script src="common/js/dayjs.min.js"></script>
+<script src="common/js/intersection-observer.js"></script>
+<script src="common/js/main.js?v83"></script>
+
+</body>
+</html>

@@ -1,0 +1,921 @@
+@charset "UTF-8";
+/*解決min-height問題*/
+body #__layout > #mainWrapperNew {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+body #__layout > #mainWrapperNew > #mainWrapperNew {
+	width: 100%;
+	flex-grow: 1;
+}
+body #__layout > #mainWrapperNew > #bottomNavNew + div:not([class]) {
+	flex-grow: 1;
+}
+body #__layout > #mainWrapperNew > #bottomNavNew + div[class="fs-7"] {
+	flex-grow: : 1;
+}
+
+#mainWrapperNew.app-mode-without-header-footer nav[aria-label="breadcrumb"],
+#mainWrapperNew.app-mode-without-header-footer .btn.btn-outline-secondary.rounded-pill.w-100.fs-xl-5 {
+	display: none!important;
+}
+
+
+html {
+  scroll-padding-top: 97px;
+}
+@media (min-width: 992px) {
+	html {
+	  scroll-padding-top: 160px;
+	}	
+}
+
+.ins-preview-wrapper {
+	overflow-x: clip;
+}
+
+
+.light-box-item {
+	width: 90vh!important;
+}
+
+body {
+	--tv-schedule-color-1: #800909;
+	--tv-schedule-color-2: #1e4786;
+	--credit-card-color-1: #513b2e;
+	--credit-card-color-2: #6f4933;
+}
+
+.row {
+	--bs-gutter-x: 0!important;
+}
+
+.g-background-load {
+	cursor: pointer!important;
+}
+
+@media (min-width: 992px) {
+  #HomePopupModal .modal-dialog {
+    max-width: 600px;
+  }
+  #HomePopupModal .modal-dialog img {
+    width: 100%;
+  }
+}
+
+#swpCampaign .swiper-pagination {
+  display: none
+}
+
+.col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-auto, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-auto, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md-auto, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-auto {
+	padding-left: initial;
+	padding-right: initial;
+}
+
+body #__layout [class*="col-"] {
+	padding-left: initial;
+	padding-right: initial;
+}
+
+.electronic-invoice .d-flex.justify-content-center.mt-3.pt-4.border-top,
+.proof-of-purchase .d-flex.justify-content-center.mt-4.pt-4.border-top {
+	display: none!important;
+}
+
+.COVER {
+	/*background-image: url('https://www.vivatv.com.tw/html/images/act/dbs/images/cover_bg.jpg')!important;*/
+}
+.CAVEAT_INSIDE ul li {
+	text-align: left!important;
+}
+.CAVEAT_INSIDE ul li a,
+.CAVEAT_INSIDE ul li a:hover {
+	color: #fff!important;
+}
+
+#menuModal .col-4.primary-category.d-flex.flex-column.overflow-scroll.bg-light {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#memberPortalWrapper .p-3.bg-white.border.shadow-sm.rounded-3.mb-3.mb-xl-4 + .bg-white.border.shadow-sm.rounded-3.mb-3.mb-xl-4 .btn.ripple-alt.px-0.py-3.w-100.text-start:first-child:after {
+  content: '取消/訂閱電子報';
+  display: block;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  margin-top: 1rem;
+}
+
+article[data-article-id="2023012001"] ol.ps-3.mb-5 li a.text-decoration-underline {
+	word-break: break-all;
+}
+
+article[data-article-id="2023030601"] .table-bordered > :not(caption) > * > * {
+	border-width: 1px;
+}
+article[data-article-id="2023030601"] .table-bordered tr td {
+	vertical-align: middle;
+}
+article[data-article-id="2023030601"] .row.row-cols-2.row-cols-xl-5.g-3.my-3 > div[class*="col-"] {
+	padding-left: .5rem;
+	padding-right: .5rem;
+}
+
+.clickableDOM {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 99;
+	max-width: 50vw;
+	/*overflow: hidden;*/
+	pointer-events: none;
+	user-select: none;
+}
+.clickableDOM-bg {
+	pointer-events: none;
+	user-select: none;
+}
+.clickableDOM-rabbit {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 25%;
+	pointer-events: auto;
+}
+.clickableDOM-bubble {
+	position: absolute;
+	bottom: 0;
+	left: 15%;
+	width: 60%;
+	pointer-events: auto;
+}
+@media (min-width: 1200px) {
+	.clickableDOM {
+		position: absolute;
+		bottom: 0;
+		right: 24vw;
+		max-width: 400px;
+	}
+	.clickableDOM:hover {
+		transition: transform .2s ease-in;
+		transform: scale(0.975);
+		transform-origin: 50% 100%;
+	}
+}
+@media (min-width: 1920px) {
+	.clickableDOM {
+		right: 24vw;
+		max-width: 400px;
+	}	
+}
+@media (min-width: 2560px) {
+	.clickableDOM {
+		right: 25vw;
+		max-width: 500px;
+	}
+}
+
+
+/*直播區塊調整*/
+body #tvScheduleHome {
+	background: #fff;
+	position: relative;
+	margin-top: 1rem;
+	border-bottom-left-radius: 0.25rem;
+	border-bottom-right-radius: 0.25rem;
+	box-shadow: 0 8px 10px -7px rgba(0,0,0,.2),5px 5px 10px 5px transparent;
+}
+body #tvScheduleHome + div {
+	position: relative;
+	margin-top: 1rem;
+}
+body #tvScheduleHome + div > a {
+	display: block;
+	position: relative;
+	
+}
+
+body #tvScheduleHome > .d-flex.flex-column.w-50.bg-white.border.p-1:first-child .col-5.col-lg-4.p-1.text-center.cursor-pointer a {
+	background: var(--tv-schedule-color-1);
+	color: #fff;
+	display: block;
+	width: 100%;
+	border-radius: 5rem;
+}
+
+body #tvScheduleHome > .d-flex.flex-column.w-50.bg-white.border.p-1:last-child .col-5.col-lg-4.p-1.text-center.cursor-pointer a {
+	background: var(--tv-schedule-color-2);
+	color: #fff;
+	display: block;
+	width: 100%;
+	border-radius: 5rem;
+}
+
+body #tvScheduleHome + div > a > img {
+	border-bottom-left-radius: 0.25rem;
+	border-bottom-right-radius: 0.25rem;
+	overflow: hidden;
+}
+body #tvScheduleHome > .d-flex.flex-column.w-50.bg-white.border.p-1 {
+	position: relative;
+}
+body #tvScheduleHome > .d-flex.flex-column.w-50.bg-white.border.p-1:first-child .position-absolute.top-0.start-0.bottom-0.end-0.text-white.opacity-100:before {
+	content: '美好1台\00a0現正播出';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 105%;
+	font-size: 0.875rem;
+	color: var(--tv-schedule-color-1);
+	width: 8rem;
+	border: 1px solid var(--tv-schedule-color-1);
+	padding: 0.125rem 0.5rem;
+	text-align: center;
+	pointer-events: none;
+}
+body #tvScheduleHome > .d-flex.flex-column.w-50.bg-white.border.p-1:last-child .position-absolute.top-0.start-0.bottom-0.end-0.text-white.opacity-100:before {
+	content: '美好2台\00a0現正播出';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 105%;
+	font-size: 0.875rem;
+	color: var(--tv-schedule-color-2);
+	width: 8rem;
+	border: 1px solid var(--tv-schedule-color-2);
+	padding: 0.125rem 0.5rem;
+	text-align: center;
+	pointer-events: none;
+}
+
+body #tvScheduleHome .col-7.col-lg-8.p-1.p-price.text-start {
+	text-align: right!important;
+	transform: translate(-0.5rem, -1.5rem);
+}
+
+body #tvScheduleHome:before {
+	content: '\e9f8 \00a0 電視購物';
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: -2rem;
+	left: 0;
+	color: #fff;
+
+	font-family: 'feather', 'Noto Sans TC', sans-serif;
+	
+	background: var(--tv-schedule-color-1);  /* fallback for old browsers */
+	background-image: url("https://www.transparenttextures.com/patterns/light-sketch.png"), -webkit-linear-gradient(to left, var(--tv-schedule-color-2), var(--tv-schedule-color-1));  /* Chrome 10-25, Safari 5.1-6 */
+	background-image: url("https://www.transparenttextures.com/patterns/light-sketch.png"), linear-gradient(to left, var(--tv-schedule-color-2), var(--tv-schedule-color-1)) ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+	width: 100%;
+	
+	padding: 0.25rem 0.75rem;
+	border-top-left-radius: 0.25rem;
+	border-top-right-radius: 0.25rem;
+}
+
+body #tvScheduleHome + div > a:before {
+	content: '\e952 \00a0 刷卡優惠';
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: -2rem;
+	left: 0;
+	color: #fff;
+
+	font-family: 'feather', 'Noto Sans TC', sans-serif;
+
+	background: #a7813a;  /* fallback for old browsers */
+	background-image: url("https://www.transparenttextures.com/patterns/light-sketch.png"), -webkit-linear-gradient(to left, var(--credit-card-color-2), var(--credit-card-color-1));  /* Chrome 10-25, Safari 5.1-6 */
+	background-image: url("https://www.transparenttextures.com/patterns/light-sketch.png"), linear-gradient(to left, var(--credit-card-color-2), var(--credit-card-color-1)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+	width: 100%;
+	text-align: center;
+	padding: 0.25rem 0.75rem;
+	border-top-left-radius: 0.25rem;
+	border-top-right-radius: 0.25rem;
+}
+
+body #tvScheduleHome > div {
+	border: 0px solid #dee2e6 !important;
+	box-shadow: 0 0 0 0px #fff;
+}
+
+body #tvScheduleHome .icon-youtube {
+	text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+	
+}
+
+body #tvScheduleHome .position-absolute.top-0 {
+	border: 1px solid #dee2e6;
+}
+
+@media (max-width: 1200px) {
+	body #tvScheduleHome + .p-2.py-3.drop-shadow.max-width-limit-50.mb-lg-4 {
+		padding-top: 0.5rem!important;
+	}
+	body #tvScheduleHome > div {
+		border: 0px solid #dee2e6 !important;
+		box-shadow: 0 0 0 3px #fff;
+	}
+	body #tvScheduleHome {
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+		margin-top: 2rem;
+	}
+	body #tvScheduleHome + div {
+		margin-top: 2rem;
+	}
+	body #tvScheduleHome:before {
+		top: -1.5rem;
+	}
+	body #tvScheduleHome + div > a:before {
+		top: -1.5rem;
+	}
+	body #tvScheduleHome > .d-flex.flex-column.w-50.bg-white.border.p-1:first-child .position-absolute.top-0.start-0.bottom-0.end-0.text-white.opacity-100:before,
+	body #tvScheduleHome > .d-flex.flex-column.w-50.bg-white.border.p-1:last-child .position-absolute.top-0.start-0.bottom-0.end-0.text-white.opacity-100:before {
+		display: none;
+	}
+
+	body #tvScheduleHome > .d-flex.flex-column.w-50.bg-white.border.p-1:first-child:before {
+		content: '美好1台\00a0現正播出';
+		display: block;
+		position: relative;
+		text-align: center;
+		padding: 0.125rem;
+		margin-bottom: 0.5rem;
+		border-bottom: 1px dotted #666;
+		color: var(--tv-schedule-color-1);
+	}
+	body #tvScheduleHome > .d-flex.flex-column.w-50.bg-white.border.p-1:last-child:before {
+		content: '美好2台\00a0現正播出';
+		display: block;
+		position: relative;
+		text-align: center;
+		padding: 0.125rem;
+		margin-bottom: 0.5rem;
+		border-bottom: 1px dotted #666;
+		color: var(--tv-schedule-color-2);
+	}
+	body #tvScheduleHome .col-7.col-lg-8.p-1.p-price.text-start {
+		text-align: right!important;
+		transform: translate(0, 0);
+	}
+	body #tvScheduleHome > .d-flex.flex-column.w-50.bg-white.border.p-1:first-child .col-5.col-lg-4.p-1.text-center.cursor-pointer,
+	body #tvScheduleHome > .d-flex.flex-column.w-50.bg-white.border.p-1:last-child .col-5.col-lg-4.p-1.text-center.cursor-pointer {
+		display: flex;
+		align-items: center;
+	}
+	body #tvScheduleHome > .d-flex.flex-column.w-50.bg-white.border.p-1:first-child .col-5.col-lg-4.p-1.text-center.cursor-pointer a,
+	body #tvScheduleHome > .d-flex.flex-column.w-50.bg-white.border.p-1:last-child .col-5.col-lg-4.p-1.text-center.cursor-pointer a {
+		font-size: 0.6875rem;
+	}
+
+	
+}
+
+
+
+/**/
+.top-nav-animated-banner {
+	/*height: 42px!important;*/
+	height: 46px!important;
+}
+#topNavAnimatedBanner {
+	padding: 0!important;
+	border: 0!important;
+	border-radius: 0!important;
+	align-self: flex-end;
+	-webkit-align-self: flex-end;
+
+	-webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
+}
+#topNav button#vivaLogo {
+	
+	padding-right: 5px!important;
+	padding-left: 0px!important;
+}
+
+@media (min-width: 992px) {
+	#topNavAnimatedBanner {
+		margin-left: 1rem;
+	}
+}
+
+/*red mode*/
+body.red-mode main,
+body.red-mode .wrapper {
+	background-color: #3C0404;
+	background-image: none;
+	background-repeat: repeat, repeat;
+	background-attachment: fixed!important;
+}
+
+body.red-mode #cakeSection a {
+	color: #fff;
+}
+body.red-mode #heroSection {
+	background: transparent;
+}
+/*麵包屑*/
+body.red-mode #mainWrapperNew > div > div[class="border-bottom"],
+body.red-mode #mainWrapperNew > div > div[class="border-bottom "],
+body.red-mode #mainWrapperNew > div[class="border-bottom"],
+body.red-mode #mainWrapperNew > div[class="border-bottom "] {
+	background: #f8f9fa;
+}
+/*大分類*/
+body.red-mode .primary-category-grid-layout {
+	background: #f8f9fa;
+}
+body.red-mode footer .bg-gainsboro,
+body.red-mode .footer .bg-gainsboro {
+	background: #5c0808!important;
+}
+body.red-mode footer,
+body.red-mode footer a,
+body.red-mode .footer,
+body.red-mode .footer a {
+	color: #fff;
+}
+body.red-mode #functionBar {
+	background: #f7f8f9;
+}
+body.red-mode .bg-post {
+	background-color: #3C0404;
+	background-image: none;
+	background-attachment: fixed!important;
+	color: #fff;
+}
+body.red-mode .bg-member-portal {
+	background-color: transparent;
+	background-image: none;
+	background-attachment: fixed!important;
+	
+}
+body.red-mode #btnReadMore {
+	color: #fff;
+	border-color: #fff;
+}
+body.red-mode div.d-flex.justify-content-center.mb-3.mb-xl-5 div.col-12.col-md-8.col-xl-6.px-3 button.btn.btn-outline-secondary.rounded-pill.w-100.fs-6.fs-xl-5,
+body.red-mode div.d-flex.mb-3.mb-xl-5.px-3.justify-content-center div.btn-group.col.col-xl-6 button.btn.btn-outline-secondary.rounded-pill-start.w-50.fs-xl-5,
+body.red-mode div.d-flex.mb-3.mb-xl-5.px-3.justify-content-center div.btn-group.col.col-xl-6 button.btn.btn-outline-secondary.rounded-pill-end.w-50.fs-xl-5,
+body.red-mode div.container-xl.px-3.mb-3.mb-xl-5 div.row.g-0.justify-content-center div.col.col-xl-6 button.btn.btn-outline-secondary.rounded-pill.w-100.fs-xl-5,
+body.red-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-8 div.d-flex.mb-3.px-3.mb-xl-5 div.btn-group.w-100 button.btn.btn-outline-secondary.w-50.fs-xl-5.rounded-pill-start,
+body.red-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-8 div.d-flex.mb-3.px-3.mb-xl-5 div.btn-group.w-100 button.btn.btn-outline-secondary.w-50.fs-xl-5.rounded-pill-end,
+body.red-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-12 div.container-xl.px-3.mb-3.mb-xl-5 div.row.g-0.justify-content-center div.col.col-xl-3 button.btn.btn-outline-secondary.rounded-pill.w-100.fs-xl-5,
+body.red-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-12 div.d-flex.mb-3.mb-xl-5.px-3.justify-content-center div.row.g-0.w-100 div.col-3.p-1 a.btn.btn-outline-secondary.rounded-pill.w-100.fs-xl-5,
+body.red-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-9 div.d-flex.mb-3.mb-xl-5.px-3.justify-content-center div.row.g-0.w-100 div.col-3.p-1 a.btn.btn-outline-secondary.rounded-pill.w-100.fs-xl-5 {
+	color: #fff;
+	border-color: #fff;
+}
+body.red-mode #checkOutStep {
+	color: #fff;
+}
+body.red-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-9 div.d-flex.flex-column.p-3.mb-xl-4 div.text-center.mb-2.fs-6.fs-xl-4.mb-xl-4,
+body.red-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-8 div.d-flex.flex-column.p-3.mb-xl-3 div.text-center.mb-2.fs-6.fs-xl-4.mb-xl-4,
+body.red-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-12 div.d-flex.flex-column.p-3.mb-xl-4 div.text-center.mb-2.fs-6.fs-xl-4.mb-xl-4,
+body.red-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-10 div.d-flex.flex-column.p-3.mb-xl-4 div.text-center.mb-2.fs-6.fs-xl-4.mb-xl-4,
+html body.fs-7.red-mode div#__nuxt div#__layout div#mainWrapperNew.position-relative.mx-auto.wrapper div div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-12.mt-xl-3 div.d-none.d-xl-block.text-center.mb-2.fs-6.fs-xl-4.mb-xl-4,
+body.red-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-6 div.d-flex.flex-column.p-3.pb-0 div.d-none.d-xl-block.text-center.mb-2.fs-6.fs-xl-4.mb-xl-4 {
+	color: #fff;
+}
+
+body.red-mode #hotSale > .p-2.fs-6,
+body.red-mode #newArrival > .p-2.fs-6 {
+	color: #fff;
+}
+
+body.red-mode .swiper-fluid .swiper-slide {
+	transition: all .5s linear;
+}
+body.red-mode .swiper-fluid .swiper-slide-prev,
+body.red-mode .swiper-fluid .swiper-slide-next {
+	/*filter: brightness(25%);*/
+}
+
+body.red-mode #swpMain .swiper-container:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.75);
+	z-index: 98;
+}
+body.red-mode #swpMain .swiper-container:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.75);
+	z-index: 98;
+}
+
+body.red-mode #swpMain.swiper-fluid {
+	opacity: 0;
+	transition: all .5s linear;
+}
+
+body.red-mode #swpMain:before {
+	content: '';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+  	background-image: url(https://www.vivatv.com.tw/common/images/event/overlay-1111-1200x720.png);
+  	background-size: 100%;
+  	background-repeat: no-repeat;
+  	background-position: center;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 98;
+	pointer-events: none;
+	user-select: none;
+}
+
+@media (min-width: 1200px) {
+	body.red-mode #swpMain:before {
+		width: 66.666%;
+		left: 50%;
+	  	transform: translateX(-50%);
+		background-image: url(https://www.vivatv.com.tw/common/images/event/overlay-1111-1400x560.png);
+	  	background-size: 100%;
+	  	background-repeat: no-repeat;
+	  	background-position: center;
+	}
+	body.red-mode #swpMain .swiper-container:before,
+	body.red-mode #swpMain .swiper-container:after {
+		width: 16.667%;
+	}
+}
+@media (min-width: 1900px) {
+	body.red-mode #swpMain:before {
+		width: 55.555%;
+	}
+	body.red-mode #swpMain .swiper-container:before,
+	body.red-mode #swpMain .swiper-container:after {
+		width: 22.5%;
+	}
+}
+@media (min-width: 2500px) {
+	body.red-mode #swpMain:before {
+		width: 51.555%;
+	}
+	body.red-mode #swpMain .swiper-container:before,
+	body.red-mode #swpMain .swiper-container:after {
+		width: 24.5%;
+	}
+}
+
+body.red-mode #swpMain .swiper-button-prev,
+body.red-mode #swpMain .swiper-button-next {
+	z-index: 102;
+}
+
+body.red-mode #HomePopupModal .modal-body img {
+	border-top-left-radius: 3rem;
+	border-bottom-right-radius: 3rem;
+	box-shadow: 0 0 15px hsl(0, 0%, 0%);
+	filter: brightness(110%) saturate(120%);
+}
+
+
+/*dark mode*/
+body.dark-mode main,
+body.dark-mode .wrapper {
+	background-color: #000;
+	/*background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");*/
+	background-image: url("https://www.vivatv.com.tw/common/images/event/dark-grid.png");
+	background-repeat: repeat;
+	background-attachment: fixed!important;
+}
+
+body.dark-mode #cakeSection a {
+	color: #fff;
+}
+body.dark-mode #heroSection {
+	background: transparent;
+	padding: 0!important;
+}
+/*麵包屑*/
+body.dark-mode #mainWrapperNew > div > div[class="border-bottom"],
+body.dark-mode #mainWrapperNew > div > div[class="border-bottom "],
+body.dark-mode #mainWrapperNew > div[class="border-bottom"],
+body.dark-mode #mainWrapperNew > div[class="border-bottom "] {
+	background: #f8f9fa;
+}
+/*大分類*/
+body.dark-mode .primary-category-grid-layout {
+	background: #f8f9fa;
+}
+body.dark-mode footer .bg-gainsboro,
+body.dark-mode .footer .bg-gainsboro {
+	background: #464646!important;
+}
+body.dark-mode footer,
+body.dark-mode footer a,
+body.dark-mode .footer,
+body.dark-mode .footer a {
+	color: #fff;
+}
+body.dark-mode #functionBar {
+	background: #f7f8f9;
+}
+body.dark-mode .bg-post {
+	background-color: #111111;
+	/*background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");*/
+	background-image: url("https://www.vivatv.com.tw/common/images/event/dark-grid.png");
+	background-attachment: fixed!important;
+	color: #fff;
+}
+body.dark-mode .bg-member-portal {
+	background-color: transparent;
+	background-image: none;
+	background-attachment: fixed!important;
+	
+}
+body.dark-mode #btnReadMore {
+	color: #fff;
+	border-color: #fff;
+}
+body.dark-mode div.d-flex.justify-content-center.mb-3.mb-xl-5 div.col-12.col-md-8.col-xl-6.px-3 button.btn.btn-outline-secondary.rounded-pill.w-100.fs-6.fs-xl-5,
+body.dark-mode div.d-flex.mb-3.mb-xl-5.px-3.justify-content-center div.btn-group.col.col-xl-6 button.btn.btn-outline-secondary.rounded-pill-start.w-50.fs-xl-5,
+body.dark-mode div.d-flex.mb-3.mb-xl-5.px-3.justify-content-center div.btn-group.col.col-xl-6 button.btn.btn-outline-secondary.rounded-pill-end.w-50.fs-xl-5,
+body.dark-mode div.container-xl.px-3.mb-3.mb-xl-5 div.row.g-0.justify-content-center div.col.col-xl-6 button.btn.btn-outline-secondary.rounded-pill.w-100.fs-xl-5,
+body.dark-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-8 div.d-flex.mb-3.px-3.mb-xl-5 div.btn-group.w-100 button.btn.btn-outline-secondary.w-50.fs-xl-5.rounded-pill-start,
+body.dark-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-8 div.d-flex.mb-3.px-3.mb-xl-5 div.btn-group.w-100 button.btn.btn-outline-secondary.w-50.fs-xl-5.rounded-pill-end,
+body.dark-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-12 div.container-xl.px-3.mb-3.mb-xl-5 div.row.g-0.justify-content-center div.col.col-xl-3 button.btn.btn-outline-secondary.rounded-pill.w-100.fs-xl-5 {
+	color: #fff;
+	border-color: #fff;
+}
+body.dark-mode #checkOutStep {
+	color: #fff;
+}
+body.dark-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-9 div.d-flex.flex-column.p-3.mb-xl-4 div.text-center.mb-2.fs-6.fs-xl-4.mb-xl-4,
+body.dark-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-8 div.d-flex.flex-column.p-3.mb-xl-3 div.text-center.mb-2.fs-6.fs-xl-4.mb-xl-4,
+body.dark-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-12 div.d-flex.flex-column.p-3.mb-xl-4 div.text-center.mb-2.fs-6.fs-xl-4.mb-xl-4,
+body.dark-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-10 div.d-flex.flex-column.p-3.mb-xl-4 div.text-center.mb-2.fs-6.fs-xl-4.mb-xl-4,
+html body.fs-7.dark-mode div#__nuxt div#__layout div#mainWrapperNew.position-relative.mx-auto.wrapper div div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-12.mt-xl-3 div.d-none.d-xl-block.text-center.mb-2.fs-6.fs-xl-4.mb-xl-4,
+body.dark-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-6 div.d-flex.flex-column.p-3.pb-0 div.d-none.d-xl-block.text-center.mb-2.fs-6.fs-xl-4.mb-xl-4 {
+	color: #fff;
+}
+
+body.dark-mode #hotSale > .p-2.fs-6,
+body.dark-mode #newArrival > .p-2.fs-6 {
+	color: #fff;
+}
+
+body.dark-mode .swiper-fluid .swiper-slide {
+	transition: all .5s linear;
+}
+body.dark-mode .swiper-fluid .swiper-slide-prev,
+body.dark-mode .swiper-fluid .swiper-slide-next {
+	/*filter: brightness(15%);*/
+}
+
+body.dark-mode #swpMain .swiper-container:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background-color: #1f1f22;
+	z-index: 98;
+}
+body.dark-mode #swpMain .swiper-container:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 100%;
+	background-color: #1f1f22;
+	z-index: 98;
+}
+
+
+
+
+body.dark-mode #swpMain.swiper-fluid {
+	opacity: 0;
+	transition: all .5s linear;
+	background-color: #1f1f22;
+}
+
+body.dark-mode #swpMain:before {
+	content: '';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+  	background-image: url(https://www.vivatv.com.tw/common/images/event/overlay-2024-blackfriday-1200x720.png);
+  	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-position: center;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 98;
+	pointer-events: none;
+	user-select: none;
+}
+
+@media (min-width: 1200px) {
+	body.dark-mode #swpMain:before {
+		width: calc(100vw - 17px);
+		left: 0;
+		transform: translateX(0%);
+		/*background-image: url(../images/overlay-blackfriday-1400x560.png);*/
+		background-image: url(https://www.vivatv.com.tw/common/images/event/overlay-2024-blackfriday-2543x524.png);
+	  	background-size: cover;
+	  	background-repeat: no-repeat;
+	  	background-position: center;
+	}
+
+	/*body.dark-mode #swpMain .swiper-container:before,
+	body.dark-mode #swpMain .swiper-container:after {
+		width: 13.25%;
+	}*/
+	body.dark-mode #swpMain .swiper-button-prev {
+		left: 28%;
+	}
+	body.dark-mode #swpMain .swiper-button-next {
+		right: 26%;
+	}
+	
+}
+@media (min-width: 1900px) {
+	/*body.dark-mode #swpMain:before {
+		width: 68%;
+	}
+	body.dark-mode #swpMain .swiper-container:before,
+	body.dark-mode #swpMain .swiper-container:after {
+		width: 16.25%;
+	}
+	body.dark-mode #swpMain .swiper-button-prev {
+		left: 12%;
+	}
+	body.dark-mode #swpMain .swiper-button-next {
+		right: 12%;
+	}*/
+}
+@media (min-width: 2500px) {
+	/*body.dark-mode #swpMain:before {
+		width: 60%;
+	}
+	body.dark-mode #swpMain .swiper-container:before,
+	body.dark-mode #swpMain .swiper-container:after {
+		width: 20.25%;
+	}
+	body.dark-mode #swpMain .swiper-button-prev {
+		left: 19%;
+	}
+	body.dark-mode #swpMain .swiper-button-next {
+		right: 19%;
+	}*/
+}
+
+body.dark-mode #swpMain .swiper-button-prev,
+body.dark-mode #swpMain .swiper-button-next {
+	z-index: 102;
+}
+
+body.dark-mode .col.p-2.p-lg-3 .text-center.py-1 {
+	color: #fff;
+}
+body.dark-mode .footer h6 {
+	color: #ccc;
+	font-size: 1.25rem;
+	margin-bottom: 1.25rem;
+}
+body.dark-mode .footer .col {
+	margin-bottom: 1rem;
+}
+
+
+
+/*rabbit mode*/
+/*body.rabbit-mode main,
+body.rabbit-mode .wrapper {
+	background-color: #3C0404;
+	background-image: none;
+	background-repeat: repeat, repeat;
+	background-attachment: fixed!important;
+}*/
+
+
+
+
+
+
+
+body.rabbit-mode .swiper-fluid .swiper-slide {
+	transition: all .5s linear;
+}
+body.rabbit-mode .swiper-fluid .swiper-slide-prev,
+body.rabbit-mode .swiper-fluid .swiper-slide-next {
+	/*filter: brightness(25%);*/
+}
+
+body.rabbit-mode #swpMain .swiper-container:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0);
+	z-index: 98;
+}
+body.rabbit-mode #swpMain .swiper-container:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0);
+	z-index: 98;
+}
+
+body.rabbit-mode #swpMain.swiper-fluid {
+	opacity: 0;
+	transition: all .5s linear;
+}
+
+body.rabbit-mode #swpMain:before {
+	content: '';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+  	background-image: url(https://www.vivatv.com.tw/common/images/event/overlay-rabbit-1200x720.png);
+  	background-size: 100%;
+  	background-repeat: no-repeat;
+  	background-position: center;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 98;
+	pointer-events: none;
+	user-select: none;
+}
+
+@media (min-width: 1200px) {
+	body.rabbit-mode #swpMain:before {
+		width: 66.666%;
+		left: 50%;
+	  	transform: translateX(-50%);
+		background-image: url(https://www.vivatv.com.tw/common/images/event/overlay-rabbit-1400x560.png);
+	  	background-size: 100%;
+	  	background-repeat: no-repeat;
+	  	background-position: center;
+	}
+	body.rabbit-mode #swpMain .swiper-container:before,
+	body.rabbit-mode #swpMain .swiper-container:after {
+		width: 16.667%;
+	}
+}
+@media (min-width: 1900px) {
+	body.rabbit-mode #swpMain:before {
+		width: 55.555%;
+	}
+	body.rabbit-mode #swpMain .swiper-container:before,
+	body.rabbit-mode #swpMain .swiper-container:after {
+		width: 22.5%;
+	}
+}
+@media (min-width: 2500px) {
+	body.rabbit-mode #swpMain:before {
+		width: 51.555%;
+	}
+	body.rabbit-mode #swpMain .swiper-container:before,
+	body.rabbit-mode #swpMain .swiper-container:after {
+		width: 24.5%;
+	}
+}
+
+body.rabbit-mode #swpMain .swiper-button-prev,
+body.rabbit-mode #swpMain .swiper-button-next {
+	z-index: 102;
+}
+

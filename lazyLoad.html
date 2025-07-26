@@ -1,0 +1,3123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximun-scale=1, user-scalable=no">
+<meta name="keywords" content="線上購物,ViVa,電視購物,影音購物,3C數位,生活百貨,家電,清潔收納,美容保養,服飾配件,食品保健,開運精品">
+<meta name="description" content="ViVa美好購物網提供各種3C家電、清潔收納、保養、服飾、食品保健、開運精品等線上購物商品，致力於提供美好的購物經驗，電視購物請鎖定ViVa TV 59頻道！">
+<meta name="robots" content="ALL">
+<link rel="shortcut icon" href="https://www.vivatv.com.tw/common/images/favicons/favicon.ico">
+<title>ViVa美好購物網</title>
+<link rel="stylesheet" href="common/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="common/css/swiper-bundle.min.css">
+<link rel="stylesheet" href="common/css/feather.css">
+<link rel="stylesheet" href="common/css/main.css?v41">
+</head>
+
+<body class="fs-7">
+
+<div id="mainWrapper" class="position-relative mx-auto">
+
+	<!-- 上方導覽列 -->
+  <div id="topNav" class="container-fluid g-0 sticky-top">
+    <div class="d-flex justify-content-between align-items-center px-2 bg-dark-theme">
+      <div class="d-flex align-items-center">
+        <button id="vivaLogo" class="btn" type="button" onclick="location.href='Home.html'"><img src="common/images/viva-logo-white.png" class="img-fluid viva-logo"></button>
+<!-- 2022/4/8 新增event banner -->
+<button id="topNavAnimatedBanner" class="btn px-0" type="button" onclick="window.open('https://www.vivatv.com.tw/html/20220407.html')"><img src="common/images/animated.png" class="img-fluid top-nav-animated-banner" alt="珍愛女人節"></button>
+      </div>
+      <div class="d-flex align-items-center">
+        <div class="d-flex position-relative me-2" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="hover" title="購物車">
+            <button id="toggleCart" class="btn text-white" type="button" data-bs-toggle="modal" data-bs-target="#shoppingCart"><span class="feather icon-shopping-cart"></span></button>
+            <span class="position-absolute badge rounded-pill cart-badge"></span>
+          </div>
+        <div class="d-flex">
+          <button id="toggleSearch" class="btn text-white" type="button" data-bs-toggle="collapse" data-bs-target="#Search"><span class="feather icon-search"></span></button>
+        </div>
+        <div class="d-flex">
+          <button id="toggleMenu" class="btn text-white" type="button" data-bs-toggle="modal" data-bs-target="#menuModal"><span class="feather icon-menu"></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 分類選單 -->
+  <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header bg-dark-theme border-bottom-0">
+          <div>
+            <button class="btn fs-7 rounded-0 text-white" type="button" onclick="location.href='/Programs.go?TVNum=TVOne'"><span class="feather icon-tv"></span> 1台 節目表</button>
+            <button class="btn fs-7 rounded-0 text-white" type="button" onclick="location.href='/ProgramsTVTwo.go?TVNum=TVTwo'"><span class="feather icon-tv"></span> 2台 節目表</button>
+          </div>
+          <div>
+            <button type="button" class="btn text-white fs-5 px-1 py-0" data-bs-dismiss="modal" aria-label="Close"><span class="feather icon-x-square"></span></button>
+          </div>
+          
+        </div>
+        <div class="modal-body p-0">
+          <div class="d-flex">
+            <div class="col-4 primary-category d-flex flex-column overflow-scroll bg-light">
+              <div class="nav nav-pills w-100">
+                <!-- tab button -->
+                <button class="nav-link active highlight sticky-top" id="v-pills-1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true">品牌旗艦館</button>
+                <button class="nav-link" id="v-pills-2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false">大分類tab</button>
+                <button class="nav-link" id="v-pills-3-tab" data-bs-toggle="pill" data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false">大分類tab</button>
+                <button class="nav-link" id="v-pills-4-tab" data-bs-toggle="pill" data-bs-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4" aria-selected="false">大分類tab</button>
+                <button class="nav-link" id="v-pills-5-tab" data-bs-toggle="pill" data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5" aria-selected="false">大分類tab</button>
+                <button class="nav-link" id="v-pills-6-tab" data-bs-toggle="pill" data-bs-target="#v-pills-6" type="button" role="tab" aria-controls="v-pills-6" aria-selected="false">大分類tab</button>
+                <button class="nav-link" id="v-pills-7-tab" data-bs-toggle="pill" data-bs-target="#v-pills-7" type="button" role="tab" aria-controls="v-pills-7" aria-selected="false">大分類tab</button>
+                <!-- 一般button -->
+                <button class="btn fs-7 w-100 rounded-0" type="button">純連結</button>
+              </div>
+              <!-- 社群按鈕 -->
+              <div class="d-flex flex-column justify-content-center border-top">
+                <button class="btn" type="button"><span class="feather icon-brand-line align-middle fs-4"></span></button>
+                <button class="btn" type="button"><span class="feather icon-brand-facebook align-middle fs-4"></span></button>
+                <button class="btn" type="button"><span class="feather icon-brand-youtube align-middle fs-4"></span></button>
+              </div>
+            </div>
+            <div class="d-flex flex-column col-8 p-0 secondary-category overflow-x-hidden">
+              <div class="tab-content bg-white flex-grow-1">
+                <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
+                  <div class="d-flex flex-column">
+                    <!-- 所有品牌旗艦 -->
+                    <div class="d-flex secondary-category-items">
+                      <div class="d-flex flex-grow-1 position-relative">
+                        <div class="w-100 position-absolute overflow-x-hidden">
+                          <div id="brandLink" class="d-flex justify-content-start align-items-center fs-7 brand-link">
+                            <button class="btn fs-7 text-white rounded-0" type="button" data-highlight-target="#b1">Dyson</button>
+                            <button class="btn fs-7 text-white" type="button" data-highlight-target="#b2">3M</button>
+                            <button class="btn fs-7 text-white" type="button" data-highlight-target="#b3">禾聯</button>
+                            <button class="btn fs-7 text-white" type="button" data-highlight-target="#b4">聲寶</button>
+                            <button class="btn fs-7 text-white" type="button" data-highlight-target="#b5">美菱</button>
+                            <button class="btn fs-7 text-white" type="button" data-highlight-target="#b6">一品夫人</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex">
+                        <button id="brandToggleBtn" data-toggle="flex-wrap" data-target="#brandLink" class="btn text-white" type="button"><span class="feather icon-chevron-down"></span></button>
+                      </div>
+                    </div>
+                    <!-- 品牌旗艦的子分類 -->
+                    <div id="minorCategory" class="d-flex overflow-scroll flex-grow-1 justify-content-center">
+                      <div class="d-flex flex-column minor-category w-100">
+
+                        <div class="d-flex flex-column p-2 highlight" id="b1" data-toggle="highlight">
+                          <div class="d-flex p-2">Dyson旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2" id="b2" data-toggle="highlight">
+                          <div class="d-flex p-2">3M旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2" id="b3" data-toggle="highlight">
+                          <div class="d-flex p-2">禾聯旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2" id="b4" data-toggle="highlight">
+                          <div class="d-flex p-2">聲寶旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2" id="b5" data-toggle="highlight">
+                          <div class="d-flex p-2">美菱旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2" id="b6" data-toggle="highlight">
+                          <div class="d-flex p-2">一品夫人旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
+                  <div id="minorCategory" class="d-flex overflow-scroll flex-grow-1 justify-content-center">
+                      <div class="d-flex flex-column minor-category w-100">
+
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<!-- 搜尋列 -->
+	<div id="Search" class="position-fixed w-100 collapse shadow">
+		<div class="d-flex w-100 p-3 bg-light border-bottom">
+			<div class="input-group">
+			  <input type="text" class="form-control fs-7 p-3 py-1" placeholder="全站免運！搜尋商品" aria-label="全站免運！搜尋商品" aria-describedby="btnSearch">
+			  <button class="btn btn-secondary fs-7" type="button" onclick="location.href='searchResult.html'">搜尋</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- 麵包屑 -->
+	<nav class="px-3 py-2 border-bottom bg-light" aria-label="breadcrumb">
+	  <ol class="breadcrumb mb-0">
+	  	<li class="breadcrumb-item"><a href="Home.html">首頁</a></li>
+	    <li class="breadcrumb-item active" aria-current="page">食品保健</li>
+	  </ol>
+	</nav>
+	<!-- 中分類 -->
+	<div class="d-flex border-bottom bg-light">
+		<div id="subCategory" class="d-flex justify-content-start flex-grow-1 px-2 py-1 fs-7 sub-category">
+			<button class="btn btn-outline-secondary btn-sm m-1 fs-7" type="button">中分類</button>
+			<button class="btn btn-outline-secondary btn-sm m-1 fs-7" type="button">中分類</button>
+			<button class="btn btn-outline-secondary btn-sm m-1 fs-7" type="button">中分類</button>
+			<button class="btn btn-outline-secondary btn-sm m-1 fs-7" type="button">中分類</button>
+			<button class="btn btn-outline-secondary btn-sm m-1 fs-7" type="button">中分類</button>
+			<button class="btn btn-outline-secondary btn-sm m-1 fs-7" type="button">中分類</button>
+			<button class="btn btn-outline-secondary btn-sm m-1 fs-7" type="button">中分類</button>
+			<button class="btn btn-outline-secondary btn-sm m-1 fs-7" type="button">中分類</button>
+		</div>
+		<div class="d-flex border-start">
+			<button id="subCategoryToggleBtn" data-toggle="flex-wrap" data-target="#subCategory" class="btn" type="button"><span class="feather icon-chevron-down"></span></button>
+		</div>
+	</div>
+	<!-- 大分類BN -->
+	<div class="p-2">
+		<div id="swpCampaign" class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="javascript:void(0);"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/1000/1200/600" class="img-fluid lazy-load" width="1200" height="600"></a>
+				</div>
+				<div class="swiper-slide">
+					<a href="javascript:void(0);"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/1001/1200/600" class="img-fluid lazy-load" width="1200" height="600"></a>
+				</div>
+				<div class="swiper-slide">
+					<a href="javascript:void(0);"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/1002/1200/600" class="img-fluid lazy-load" width="1200" height="600"></a>
+				</div>
+				<div class="swiper-slide">
+					<a href="javascript:void(0);"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/1003/1200/600" class="img-fluid lazy-load" width="1200" height="600"></a>
+				</div>
+				<div class="swiper-slide">
+					<a href="javascript:void(0);"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/1004/1200/600" class="img-fluid lazy-load" width="1200" height="600"></a>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<!-- SVG標題(測試) -->
+	<div>
+		<div class="mx-auto position-relative bg-ranking clip-svg">
+			<div class="position-absolute top-50 start-50 text-center text-white translate-middle fw-bold ls-1 text-shadow">人氣TOP3</div>
+		</div>
+		<svg width="0" height="0">
+			<defs>
+				<clipPath id="myClip" clipPathUnits="objectBoundingBox">
+					<path width="200" d="M0.916,0.5 c-0.016,-0.305,-0.048,-0.5,-0.084,-0.5 H0.168 C0.133,0,0.1,0.195,0.084,0.5 S0.036,1,0,1 h1 C0.965,1,0.932,0.805,0.916,0.5"/>
+				</clipPath>
+			</defs>
+		</svg>
+	</div>
+	<!-- TOP3 -->
+	<div class="p-1 pt-4 bg-ranking">
+		<div class="row row-cols-3 g-0">
+			<div class="col p-1">
+				<a href="javascript:void(0);">
+					<div class="d-flex flex-column position-relative p-1 bg-white">
+						<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/1/300/300" class="img-fluid lazy-load" width="300" height="300">
+						<div class="position-absolute top-0 start-50 px-2 py-1 medal-1 text-white"></div>
+						<div class="p-1 pb-0 p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>
+						<div class="d-flex flex-row">
+							<div class="p-1 pt-0 p-price">228000</div>	
+							<div class="p-1 pt-0 o-price">468000</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col p-1">
+				<a href="javascript:void(0);">
+					<div class="d-flex flex-column position-relative p-1 bg-white">
+						<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/2/300/300" class="img-fluid lazy-load" width="300" height="300">
+						<div class="position-absolute top-0 start-50 px-2 py-1 medal-2 text-white"></div>
+						<div class="p-1 pb-0 p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>
+						<div class="d-flex flex-row">
+							<div class="p-1 pt-0 p-price">2280</div>	
+							<div class="p-1 pt-0 o-price">4680</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col p-1">
+				<a href="javascript:void(0);">
+					<div class="d-flex flex-column position-relative p-1 bg-white">
+						<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/3/300/300" class="img-fluid lazy-load" width="300" height="300">
+						<div class="position-absolute top-0 start-50 px-2 py-1 medal-3 text-white"></div>
+						<div class="p-1 pb-0 p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>
+						<div class="d-flex flex-row">
+							<div class="p-1 pt-0 p-price">2280</div>	
+							<div class="p-1 pt-0 o-price">4680</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- 商品 -->
+	<div class="d-flex flex-column">
+		<!-- 功能列 -->
+		<div class="d-flex justify-content-between p-2 bg-white border-bottom sticky-top-nav">
+			<div class="d-flex">
+				
+				<select class="form-select form-select-sm fs-7 me-2" aria-label="Default select example">
+				  <option value="1" selected>上架新→舊</option>
+				  <option value="2">上架舊→新</option>
+				</select>
+				
+				<select class="form-select form-select-sm fs-7" aria-label="Default select example">
+				  <option value="1" selected>價格低→高</option>
+				  <option value="2">價格高→低</option>
+				</select>
+			</div>
+			<div class="d-flex">
+				<button id="toggleGrid" class="btn active" type="button" data-toggle-view="grid-view" data-target="#productList"><span class="feather icon-grid"></span></button>
+				<button id="toggleList" class="btn" type="button" data-toggle-view="list-view" data-target="#productList"><span class="feather icon-list"></span></button>
+			</div>
+		</div>
+		<!-- 商品列表 -->
+		<div id="productList" class="d-flex grid-view">
+			
+			<div class="row p-1 g-0">
+				
+				<div class="item p-1">
+					<a href="javascript:void(0);">
+						<div class="p-2 bg-white shadow-sm">
+							<div class="d-flex bg-white item-body">
+								<div class="d-flex position-relative item-image">
+									<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/4/300/300" class="img-fluid lazy-load" width="300" height="300">
+									<div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+								</div>
+								<div class="d-flex flex-column justify-content-between item-info">
+									<div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>									
+									<div class="d-flex justify-content-between item-price">
+										<div class="d-flex">
+											<div class="p-1 p-price">228000</div>	
+											<div class="p-1 o-price">468000</div>
+										</div>
+										<div class="d-flex justify-content-center tag-group">
+											<div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+											<div class="px-2 py-1 mx-1 rounded border">NEW</div>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="item p-1">
+					<a href="javascript:void(0);">
+						<div class="p-2 bg-white shadow-sm">
+							<div class="d-flex bg-white item-body">
+								<div class="d-flex position-relative item-image">
+									<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/5/300/300" class="img-fluid lazy-load" width="300" height="300">
+									<div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+								</div>
+								<div class="d-flex flex-column justify-content-between item-info">
+									<div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>									
+									<div class="d-flex justify-content-between item-price">
+										<div class="d-flex">
+											<div class="p-1 p-price">2280</div>	
+											<div class="p-1 o-price">4680</div>
+										</div>
+										<div class="d-flex justify-content-center tag-group">
+											<!-- 沒有tag的情況 -->
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="item p-1">
+					<a href="javascript:void(0);">
+						<div class="p-2 bg-white shadow-sm">
+							<div class="d-flex bg-white item-body">
+								<div class="d-flex position-relative item-image">
+									<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/6/300/300" class="img-fluid lazy-load" width="300" height="300">
+									<div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+								</div>
+								<div class="d-flex flex-column justify-content-between item-info">
+									<div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>									
+									<div class="d-flex justify-content-between item-price">
+										<div class="d-flex">
+											<div class="p-1 p-price">2280</div>	
+											<div class="p-1 o-price">4680</div>
+										</div>
+										<div class="d-flex justify-content-center tag-group">
+											<div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+											<div class="px-2 py-1 mx-1 rounded border">NEW</div>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="item p-1">
+					<a href="javascript:void(0);">
+						<div class="p-2 bg-white shadow-sm">
+							<div class="d-flex bg-white item-body">
+								<div class="d-flex position-relative item-image">
+									<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/7/300/300" class="img-fluid lazy-load" width="300" height="300">
+									<div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+								</div>
+								<div class="d-flex flex-column justify-content-between item-info">
+									<div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>									
+									<div class="d-flex justify-content-between item-price">
+										<div class="d-flex">
+											<div class="p-1 p-price">2280</div>	
+											<div class="p-1 o-price">4680</div>
+										</div>
+										<div class="d-flex justify-content-center tag-group">
+											<div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+											<div class="px-2 py-1 mx-1 rounded border">NEW</div>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="item p-1">
+					<a href="javascript:void(0);">
+						<div class="p-2 bg-white shadow-sm">
+							<div class="d-flex bg-white item-body">
+								<div class="d-flex position-relative item-image">
+									<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/8/300/300" class="img-fluid lazy-load" width="300" height="300">
+									<div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+								</div>
+								<div class="d-flex flex-column justify-content-between item-info">
+									<div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>									
+									<div class="d-flex justify-content-between item-price">
+										<div class="d-flex">
+											<div class="p-1 p-price">2280</div>	
+											<div class="p-1 o-price">4680</div>
+										</div>
+										<div class="d-flex justify-content-center tag-group">
+											<div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+											<div class="px-2 py-1 mx-1 rounded border">NEW</div>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="item p-1">
+					<a href="javascript:void(0);">
+						<div class="p-2 bg-white shadow-sm">
+							<div class="d-flex bg-white item-body">
+								<div class="d-flex position-relative item-image">
+									<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/9/300/300" class="img-fluid lazy-load" width="300" height="300">
+									<div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+								</div>
+								<div class="d-flex flex-column justify-content-between item-info">
+									<div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>									
+									<div class="d-flex justify-content-between item-price">
+										<div class="d-flex">
+											<div class="p-1 p-price">2280</div>	
+											<div class="p-1 o-price">4680</div>
+										</div>
+										<div class="d-flex justify-content-center tag-group">
+											<div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+											<div class="px-2 py-1 mx-1 rounded border">NEW</div>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="item p-1">
+					<a href="javascript:void(0);">
+						<div class="p-2 bg-white shadow-sm">
+							<div class="d-flex bg-white item-body">
+								<div class="d-flex position-relative item-image">
+									<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/10/300/300" class="img-fluid lazy-load" width="300" height="300">
+									<div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+								</div>
+								<div class="d-flex flex-column justify-content-between item-info">
+									<div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>									
+									<div class="d-flex justify-content-between item-price">
+										<div class="d-flex">
+											<div class="p-1 p-price">2280</div>	
+											<div class="p-1 o-price">4680</div>
+										</div>
+										<div class="d-flex justify-content-center tag-group">
+											<!-- 沒有tag的情況 -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="item p-1">
+					<a href="javascript:void(0);">
+						<div class="p-2 bg-white shadow-sm">
+							<div class="d-flex bg-white item-body">
+								<div class="d-flex position-relative item-image">
+									<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/11/300/300" class="img-fluid lazy-load" width="300" height="300">
+									<div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+								</div>
+								<div class="d-flex flex-column justify-content-between item-info">
+									<div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>									
+									<div class="d-flex justify-content-between item-price">
+										<div class="d-flex">
+											<div class="p-1 p-price">2280</div>	
+											<div class="p-1 o-price">4680</div>
+										</div>
+										<div class="d-flex justify-content-center tag-group">
+											<div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+											<div class="px-2 py-1 mx-1 rounded border">NEW</div>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="item p-1">
+					<a href="javascript:void(0);">
+						<div class="p-2 bg-white shadow-sm">
+							<div class="d-flex bg-white item-body">
+								<div class="d-flex position-relative item-image">
+									<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/12/300/300" class="img-fluid lazy-load" width="300" height="300">
+									<div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+								</div>
+								<div class="d-flex flex-column justify-content-between item-info">
+									<div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>									
+									<div class="d-flex justify-content-between item-price">
+										<div class="d-flex">
+											<div class="p-1 p-price">2280</div>	
+											<div class="p-1 o-price">4680</div>
+										</div>
+										<div class="d-flex justify-content-center tag-group">
+											<div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+											<div class="px-2 py-1 mx-1 rounded border">NEW</div>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="item p-1">
+					<a href="javascript:void(0);">
+						<div class="p-2 bg-white shadow-sm">
+							<div class="d-flex bg-white item-body">
+								<div class="d-flex position-relative item-image">
+									<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/13/300/300" class="img-fluid lazy-load" width="300" height="300">
+									<div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+								</div>
+								<div class="d-flex flex-column justify-content-between item-info">
+									<div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>									
+									<div class="d-flex justify-content-between item-price">
+										<div class="d-flex">
+											<div class="p-1 p-price">2280</div>	
+											<div class="p-1 o-price">4680</div>
+										</div>
+										<div class="d-flex justify-content-center tag-group">
+											<div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+											<div class="px-2 py-1 mx-1 rounded border">NEW</div>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/14/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/15/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/16/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/17/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/18/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/19/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/20/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/21/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/22/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/23/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/24/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/25/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/26/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/27/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/28/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/29/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/30/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/31/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/32/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/33/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/34/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/35/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/36/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/37/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/38/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/39/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/40/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/41/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/42/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/43/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/44/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/45/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/46/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/47/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/48/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/49/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/50/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/51/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/52/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/53/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/54/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/55/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/56/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/57/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/58/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/59/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/60/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/61/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/62/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/63/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/64/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/65/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/66/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/67/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/68/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/69/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/70/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/71/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/72/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/73/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/74/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/75/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/76/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/77/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/78/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/79/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/80/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/81/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/82/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/83/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/84/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/85/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/186/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/87/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/88/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/89/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/90/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/91/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/92/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/93/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/94/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/95/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/96/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/197/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/98/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/99/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/100/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/101/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/102/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item p-1">
+          <a href="javascript:void(0);">
+            <div class="p-2 bg-white shadow-sm">
+              <div class="d-flex bg-white item-body">
+                <div class="d-flex position-relative item-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/id/103/300/300" class="img-fluid lazy-load" width="300" height="300">
+                  <div class="position-absolute top-0 start-0 px-2 py-1 bg-discount text-white">49折</div>
+                </div>
+                <div class="d-flex flex-column justify-content-between item-info">
+                  <div class="p-name-2">Dr.愛伊健康德國專用高濃度動蒜精(30粒/盒)×7盒123</div>                  
+                  <div class="d-flex justify-content-between item-price">
+                    <div class="d-flex">
+                      <div class="p-1 p-price">2280</div> 
+                      <div class="p-1 o-price">4680</div>
+                    </div>
+                    <div class="d-flex justify-content-center tag-group">
+                      <div class="px-2 py-1 mx-1 rounded border">結帳折100</div>
+                      <div class="px-2 py-1 mx-1 rounded border">NEW</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        
+
+			</div>
+		</div>
+	</div>
+
+	
+
+	
+
+	
+
+	
+
+	<!-- 下方導覽列 -->
+	<div id="bottomNav" class="container-fluid g-0 position-fixed">
+		<!-- 瀏覽紀錄 -->
+		<div id="History" class="collapse border-top bg-light">
+			<div class="d-flex p-3 pb-1">瀏覽紀錄</div>
+			<div class="d-flex p-3 pt-1">
+				<div id="swpHistory" class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="javascript:void(0);">
+								<div class="d-flex flex-column">
+									<img src="https://picsum.photos/300/300" class="img-fluid rounded-3">
+									<div class="p-1 pt-0 p-price">2280</div>
+								</div></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="javascript:void(0);">
+								<div class="d-flex flex-column">
+									<img src="https://picsum.photos/300/300" class="img-fluid rounded-3">
+									<div class="p-1 pt-0 p-price">2280</div>
+								</div></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="javascript:void(0);">
+								<div class="d-flex flex-column">
+									<img src="https://picsum.photos/300/300" class="img-fluid rounded-3">
+									<div class="p-1 pt-0 p-price">2280</div>
+								</div></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="javascript:void(0);">
+								<div class="d-flex flex-column">
+									<img src="https://picsum.photos/300/300" class="img-fluid rounded-3">
+									<div class="p-1 pt-0 p-price">2280</div>
+								</div></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="javascript:void(0);">
+								<div class="d-flex flex-column">
+									<img src="https://picsum.photos/300/300" class="img-fluid rounded-3">
+									<div class="p-1 pt-0 p-price">2280</div>
+								</div></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="javascript:void(0);">
+								<div class="d-flex flex-column">
+									<img src="https://picsum.photos/300/300" class="img-fluid rounded-3">
+									<div class="p-1 pt-0 p-price">2280</div>
+								</div></a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 底部按鈕 -->
+		<div class="d-flex justify-content-around align-items-center bg-dark-theme">
+			<div class="d-flex p-1">
+				<button id="toggleFavorite" class="d-inline-flex flex-column align-items-center justify-content-center btn text-white" type="button"><span class="feather icon-heart"></span><span class="fs-7">收藏清單</span></button>
+			</div>
+			<div class="d-flex p-1">
+				<button id="toggleHistory" class="d-inline-flex flex-column align-items-center justify-content-center btn text-white" type="button" data-bs-toggle="collapse" data-bs-target="#History"><span class="feather icon-clock"></span><span class="fs-7">瀏覽紀錄</span></button>
+			</div>
+			<div class="d-flex p-1">
+				<button id="toggleCardCampaign" class="d-inline-flex flex-column align-items-center justify-content-center btn text-white" type="button"><span class="feather icon-credit-card"></span><span class="fs-7">刷卡優惠</span></button>
+			</div>
+			<div class="d-flex p-1">
+				<button id="toggleMemberSection" class="d-inline-flex flex-column align-items-center justify-content-center btn text-white" type="button"><span class="feather icon-user"></span><span class="fs-7">會員/客服</span></button>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+</div>
+
+<!-- JS -->
+<script src="common/bootstrap-5.0.0-beta2-dist/js/bootstrap.bundle.js"></script>
+<script src="common/js/jquery-1.11.3.min.js"></script>
+<script src="common/js/swiper-bundle.min.js"></script>
+<script src="common/js/dayjs.min.js"></script>
+<script src="common/js/intersection-observer.js"></script>
+<script src="common/js/main.js?v41"></script>
+
+</body>
+</html>

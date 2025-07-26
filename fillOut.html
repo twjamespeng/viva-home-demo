@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximun-scale=1, user-scalable=no">
+<meta name="keywords" content="線上購物,ViVa,電視購物,影音購物,3C數位,生活百貨,家電,清潔收納,美容保養,服飾配件,食品保健,開運精品">
+<meta name="description" content="ViVa美好購物網提供各種3C家電、清潔收納、保養、服飾、食品保健、開運精品等線上購物商品，致力於提供美好的購物經驗，電視購物請鎖定ViVa TV 59頻道！">
+<meta name="robots" content="ALL">
+<link rel="shortcut icon" href="https://www.vivatv.com.tw/common/images/favicons/favicon.ico">
+<title>收件資料填寫 - ViVa美好購物網</title>
+<link rel="stylesheet" href="common/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="common/css/swiper-bundle.min.css">
+<link rel="stylesheet" href="common/css/feather.css?v1">
+<link rel="stylesheet" href="common/css/main.css?v72">
+</head>
+
+<body class="fs-7">
+
+<div id="mainWrapperNew" class="position-relative mx-auto">
+  
+  
+	<!-- 上方導覽列 NEW -->
+  <div id="topNav" class="sticky-top bg-dark-theme">
+    <div id="topNavInner" class="container-xl d-flex justify-content-between align-items-center px-2 mx-auto">
+      <div class="d-flex align-items-center">
+        <button id="vivaLogo" class="btn" type="button" onclick="location.href='Home.html'"><img src="common/images/viva-logo-white.png" class="img-fluid viva-logo"></button>
+        <!-- 2022/4/8 新增event banner -->
+        <button id="topNavAnimatedBanner" class="btn px-0 py-0" type="button" onclick="window.open('https://www.vivatv.com.tw/html/20221111act.html')"><img src="common/images/animated.png" class="img-fluid top-nav-animated-banner" alt="V1111P就是您"></button>
+      </div>
+      <div class="d-flex align-items-center">
+        <!-- 購物車 -->
+        <div class="d-flex position-relative">
+          <button id="toggleCart" class="btn text-white" type="button" data-bs-toggle="modal" data-bs-target="#shoppingCart">
+            <div class=""><span class="feather icon-shopping-cart"></span><span class="d-none d-xl-inline ms-3 me-1 fs-7">購物車</span></div>
+          </button>
+          <span class="position-absolute badge rounded-pill cart-badge"></span>
+        </div>
+        <!-- 會員專區 -->
+        <div class="d-none d-xl-flex">
+          <button class="btn text-white" type="button" onclick="location.href='memberPortal.html'"><span class="feather icon-user"></span><span class="mx-1 fs-7">會員專區</span></button>
+        </div>
+        
+
+        <div class="d-flex d-lg-none">
+          <button id="toggleSearch" class="btn text-white" type="button" data-bs-toggle="collapse" data-bs-target="#Search"><span class="feather icon-search"></span></button>
+        </div>
+        <div class="d-flex d-lg-none">
+          <button id="toggleMenu" class="btn text-white" type="button" data-bs-toggle="modal" data-bs-target="#menuModal"><span class="feather icon-menu"></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<!-- mobile分類選單 NEW -->
+  <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header bg-dark-theme border-bottom-0">
+          <div>
+            <button class="btn fs-7 rounded-0 text-white" type="button" onclick="location.href='/Programs.go?TVNum=TVOne'"><span class="feather icon-tv"></span> 1台 節目表</button>
+            <button class="btn fs-7 rounded-0 text-white" type="button" onclick="location.href='/ProgramsTVTwo.go?TVNum=TVTwo'"><span class="feather icon-tv"></span> 2台 節目表</button>
+          </div>
+          <div>
+            <button type="button" class="btn text-white fs-5 px-1 py-0" data-bs-dismiss="modal" aria-label="Close"><span class="feather icon-x-square"></span></button>
+          </div>
+          
+        </div>
+        <div class="modal-body p-0">
+          <div class="d-flex">
+            <div class="col-4 primary-category d-flex flex-column overflow-scroll bg-light">
+              <div class="nav nav-pills w-100">
+                <!-- tab button -->
+                <button class="nav-link active highlight sticky-top" id="v-pills-1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true">品牌旗艦館</button>
+                <button class="nav-link" id="v-pills-2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false">大分類tab</button>
+                <button class="nav-link" id="v-pills-3-tab" data-bs-toggle="pill" data-bs-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false">大分類tab</button>
+                <button class="nav-link" id="v-pills-4-tab" data-bs-toggle="pill" data-bs-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4" aria-selected="false">大分類tab</button>
+                <button class="nav-link" id="v-pills-5-tab" data-bs-toggle="pill" data-bs-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5" aria-selected="false">大分類tab</button>
+                <button class="nav-link" id="v-pills-6-tab" data-bs-toggle="pill" data-bs-target="#v-pills-6" type="button" role="tab" aria-controls="v-pills-6" aria-selected="false">大分類tab</button>
+                <button class="nav-link" id="v-pills-7-tab" data-bs-toggle="pill" data-bs-target="#v-pills-7" type="button" role="tab" aria-controls="v-pills-7" aria-selected="false">大分類tab</button>
+                <!-- 一般button -->
+                <button class="btn fs-7 w-100 rounded-0" type="button">純連結</button>
+              </div>
+              <!-- 社群按鈕 -->
+              <div class="d-flex flex-column justify-content-center border-top">
+                <button class="btn" type="button"><span class="feather icon-brand-line align-middle fs-4"></span></button>
+                <button class="btn" type="button"><span class="feather icon-brand-facebook align-middle fs-4"></span></button>
+                <button class="btn" type="button"><span class="feather icon-brand-youtube align-middle fs-4"></span></button>
+              </div>
+            </div>
+            <div class="d-flex flex-column col-8 p-0 secondary-category overflow-x-hidden">
+              <div class="tab-content bg-white flex-grow-1">
+                <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
+                  <div class="d-flex flex-column">
+                    <!-- 所有品牌旗艦 -->
+                    <div class="d-flex secondary-category-items">
+                      <div class="d-flex flex-grow-1 position-relative">
+                        <div class="w-100 position-absolute overflow-x-hidden">
+                          <div id="brandLink" class="d-flex justify-content-start align-items-center fs-7 brand-link">
+                            <button class="btn fs-7 text-white rounded-0" type="button" data-highlight-target="#b1">Dyson</button>
+                            <button class="btn fs-7 text-white" type="button" data-highlight-target="#b2">3M</button>
+                            <button class="btn fs-7 text-white" type="button" data-highlight-target="#b3">禾聯</button>
+                            <button class="btn fs-7 text-white" type="button" data-highlight-target="#b4">聲寶</button>
+                            <button class="btn fs-7 text-white" type="button" data-highlight-target="#b5">美菱</button>
+                            <button class="btn fs-7 text-white" type="button" data-highlight-target="#b6">一品夫人</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex">
+                        <button id="brandToggleBtn" data-toggle="flex-wrap" data-target="#brandLink" class="btn text-white" type="button"><span class="feather icon-chevron-down"></span></button>
+                      </div>
+                    </div>
+                    <!-- 品牌旗艦的子分類 -->
+                    <div id="minorCategory" class="d-flex overflow-scroll flex-grow-1 justify-content-center">
+                      <div class="d-flex flex-column minor-category w-100">
+
+                        <div class="d-flex flex-column p-2 highlight" id="b1" data-toggle="highlight">
+                          <div class="d-flex p-2">Dyson旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2" id="b2" data-toggle="highlight">
+                          <div class="d-flex p-2">3M旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2" id="b3" data-toggle="highlight">
+                          <div class="d-flex p-2">禾聯旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2" id="b4" data-toggle="highlight">
+                          <div class="d-flex p-2">聲寶旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2" id="b5" data-toggle="highlight">
+                          <div class="d-flex p-2">美菱旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2" id="b6" data-toggle="highlight">
+                          <div class="d-flex p-2">一品夫人旗艦館</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
+                  <div id="minorCategory" class="d-flex overflow-scroll flex-grow-1 justify-content-center">
+                      <div class="d-flex flex-column minor-category w-100">
+
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column p-2">
+                          <div class="d-flex p-2">中分類</div>
+                          <div class="d-flex p-2 bg-white">
+                            <div class="row row-cols-3 w-100 g-0">
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                              <div class="d-flex justify-content-center p-2"><a href="javascript:void(0);" class="w-100 text-center">小分類</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<!-- 搜尋列 NEW -->
+  <div id="Search" class="position-fixed w-100 collapse shadow">
+    <div class="d-flex w-100 p-3 bg-light border-bottom">
+      <div class="input-group max-width-limit-50 mx-auto">
+        <input type="text" class="form-control fs-7 p-3 py-1" placeholder="全站免運！搜尋商品" aria-label="全站免運！搜尋商品" aria-describedby="btnSearch">
+        <button class="btn btn-secondary fs-7" type="button" onclick="location.href='searchResult.html'">搜尋</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主要內容 NEW -->
+  <main>
+  	<!-- 主題活動文字 NEW -->
+    <div id="campaignLinkAndSearch" class="d-none d-xl-flex flex-column border-bottom bg-light pt-lg-2 pb-lg-2">
+      <div class="d-flex justify-content-between container-xl p-0">
+        
+        <div class="d-flex">
+          <div id="campaignLink" class="d-flex flex-grow-1 px-2 fs-7 campaign-link mx-auto">
+            <div class="d-flex align-items-center p-2 me-xl-1"><a href="productPage.html">君悅磅蛋糕</a></div>
+            <div class="d-flex align-items-center p-2 me-xl-1"><a href="primaryCategory.html">日本頭皮養護</a></div>
+            <div class="d-flex align-items-center p-2 me-xl-1"><a href="secondaryCategory.html">天然舒壓精油</a></div>
+            <div class="d-flex align-items-center p-2 me-xl-1"><a href="primaryCategory.html">暖身沖泡飲品</a></div>
+            <div class="d-flex align-items-center p-2 me-xl-1"><a href="primaryCategory.html">保濕補水面膜</a></div>
+            <div class="d-flex align-items-center p-2 me-xl-1"><a href="productPage.html">義大利聖誕麵包</a></div>
+            <div class="d-flex align-items-center p-2 me-xl-1"><a href="primaryCategory.html">肌膚修復身體乳</a></div>
+            <div class="d-flex align-items-center p-2 me-xl-1"><a href="secondaryCategory.html">3M推薦枕</a></div>
+          </div>
+          <div class="d-flex">
+            <button id="campaignToggleBtn" data-toggle="flex-wrap" data-target="#campaignLink" class="btn" type="button"><span class="feather icon-chevron-down"></span></button>
+          </div>
+        </div>
+        <!-- desktop搜尋列 -->
+        <div id="desktopSearchBar" class="d-none d-xl-flex">
+          <div class="input-group py-2">
+            <input type="text" class="form-control fs-7 p-3 py-1" placeholder="全站免運！搜尋商品" aria-label="全站免運！搜尋商品" aria-describedby="btnSearch">
+            <button class="btn btn-secondary fs-7" type="button" onclick="location.href='searchResult.html'">搜尋</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- desktop分類選單 NEW -->
+    <div id="desktopNav" class="d-none d-xl-block bg-white border-bottom sticky-top-nav custom-shadow" style="z-index: 99;">
+      <div class="container-xl g-0 p-0">
+        <div class="d-flex flex-column">
+          <!-- 大分類 -->
+          <div class="d-flex px-lg-0">
+            <div class="nav nav-pills justify-content-between w-100">
+              <button class="nav-link p-xl-3" id="d-pills-1-tab" data-url="flagshipList.html" data-bs-toggle="pill" data-bs-target="#d-pills-1" type="button" role="tab" aria-controls="d-pills-1" aria-selected="false">品牌旗艦館</button>
+              <button class="nav-link p-xl-3" id="d-pills-2-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-2" type="button" role="tab" aria-controls="d-pills-2" aria-selected="false">品味生活</button>
+              <button class="nav-link p-xl-3" id="d-pills-3-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-3" type="button" role="tab" aria-controls="d-pills-3" aria-selected="false">質感家電</button>
+              <button class="nav-link p-xl-3" id="d-pills-4-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-4" type="button" role="tab" aria-controls="d-pills-4" aria-selected="false">時尚名品</button>
+              <button class="nav-link p-xl-3" id="d-pills-5-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-5" type="button" role="tab" aria-controls="d-pills-5" aria-selected="false">美妝香氛</button>
+              <button class="nav-link p-xl-3" id="d-pills-6-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-6" type="button" role="tab" aria-controls="d-pills-6" aria-selected="false">健康生活</button>
+              <button class="nav-link p-xl-3" id="d-pills-7-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-7" type="button" role="tab" aria-controls="d-pills-7" aria-selected="false">美味食光</button>
+              <button class="nav-link p-xl-3" id="d-pills-8-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-8" type="button" role="tab" aria-controls="d-pills-8" aria-selected="false">開運珍藏</button>
+              <button class="nav-link p-xl-3" id="d-pills-9-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-9" type="button" role="tab" aria-controls="d-pills-9" aria-selected="false">潮流電玩</button>
+              <button class="nav-link p-xl-3" id="d-pills-10-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-10" type="button" role="tab" aria-controls="d-pills-10" aria-selected="false">日用清潔</button>
+              <button class="nav-link p-xl-3" id="d-pills-11-tab" data-url="primaryCategory.html" data-bs-toggle="pill" data-bs-target="#d-pills-11" type="button" role="tab" aria-controls="d-pills-11" aria-selected="false">活動專區</button>
+            </div>
+          </div>
+          <!-- 中分類 -->
+          <div id="desktopNavDetection" class="position-absolute w-100 start-0 top-100 swiper-section">
+            <div class="d-flex container-xl g-0 p-0 bg-gainsboro custom-shadow">
+              <div class="tab-content w-100">
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-1" role="tabpanel" aria-labelledby="d-pills-1-tab">
+                  <!-- 旗艦館分類(swiper處理) -->
+                  <div id="swpFlagshipBrandInSubcategory" class="desktop-subcategory-swiper bg-light p-4 pb-2 position-relative">
+                    <div class="swiper-container pb-4">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-tvgame.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-普雷伊">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">普雷伊</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-dietu.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-大侑食尚生活">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">大侑食尚生活</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-huato.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-華陀扶元堂專館">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">華陀扶元堂專館</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-3m.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-3M生活">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">3M生活</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-hugodeco.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-榆果傢飾">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">榆果傢飾</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-hario.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-日本HARIO">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">日本HARIO</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-fbc.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-台塑生醫館">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">台塑生醫館</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-maison.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-藏寓">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">藏寓</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div> 
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-gourmets.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-聯馥食品專館">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">聯馥食品專館</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div> 
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-bohemian.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-波西米亞人">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">波西米亞人</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-luck.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-開運方程式">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">開運方程式</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-placeholder.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-placeholder">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">placeholder</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-placeholder.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-placeholder">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">placeholder</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="d-flex flex-column border bg-white shadow-sm">
+                            <a href="flagshipBrand.html">
+                              <div class="p-1">
+                                <!-- 品牌logo -->
+                                <div class="position-relative">
+                                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="common/images/flagship/logo-placeholder.jpg" class="img-fluid lazy-load" width="300" height="300" alt="logo-placeholder">
+                                </div>
+                                <!-- 品牌名稱 -->
+                                <div class="d-flex flex-column py-1 py-xl-2 border-top">
+                                  <div class="bg-white text-secondary text-center fs-75 px-1 px-xl-1 ellipsis-1">placeholder</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>  
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-2" role="tabpanel" aria-labelledby="d-pills-2-tab">
+                  <!-- 其他分類 -->
+                  <div class="desktop-subcategory w-100 bg-light p-4">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">TV熱銷快搜</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">主題強檔推薦</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">餐廚鍋具</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">餐廚用品</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">傢俱</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">床墊/床組</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">居家寢飾</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">家飾佈置</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">衛浴用品</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">收納晾曬</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">居家修繕</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">生活百貨</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">兒童寶貝館</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">運動/按摩</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">戶外休閒</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">寵物毛孩館</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">汽機車周邊</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【3M生活】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【WEDGWOOD】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【日本HARIO】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【榆果傢飾】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【輝葉】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【英萊斯克】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【法國利曼】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【RONA樂娜】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【西班牙Pulltex】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">【BOHEMIA波西米亞】</button>
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">18禁專區</button>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-3" role="tabpanel" aria-labelledby="d-pills-3-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">質感家電子分類</button>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-4" role="tabpanel" aria-labelledby="d-pills-4-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">時尚名品子分類</button>
+                  </div>
+                </div>
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-5" role="tabpanel" aria-labelledby="d-pills-5-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">美妝香氛子分類</button>
+                  </div>
+                </div>
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-6" role="tabpanel" aria-labelledby="d-pills-6-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">健康生活子分類</button>
+                  </div>
+                </div>
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-7" role="tabpanel" aria-labelledby="d-pills-7-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">美味食光子分類</button>
+                  </div>
+                </div>
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-8" role="tabpanel" aria-labelledby="d-pills-8-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">開運珍藏子分類</button>
+                  </div>
+                </div>
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-9" role="tabpanel" aria-labelledby="d-pills-9-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">潮流電玩子分類</button>
+                  </div>
+                </div>
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-10" role="tabpanel" aria-labelledby="d-pills-10-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">日用清潔子分類</button>
+                  </div>
+                </div>
+                <div class="tab-pane fade p-2 custom-shadow" id="d-pills-11" role="tabpanel" aria-labelledby="d-pills-11-tab">
+                  <div class="desktop-subcategory w-100 bg-light p-4 fs-75">
+                    <button class="btn p-2 border rounded-0 fs-75" type="button" onclick="location.href='secondaryCategory.html'">活動專區子分類</button>
+                  </div>
+                </div>
+
+
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-xl px-0 pt-4">
+      <div class="text-center fs-6 fs-xl-4">聖誕麵包收件資料填寫(名稱後台設定)</div>
+    </div>
+
+    <div id="initLogin" class="container-xl mt-4">
+      <div class="row g-0 justify-content-center">
+        <div class="col-8 col-xl-4">
+          <button class="btn btn-danger rounded-pill w-100 mb-3 mb-xl-0 fs-xl-5" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">會員登入</button>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <!-- 登入功能區塊(未登入時顯示，已登入則不用顯示) -->
+    <!-- <div id="loginSection" class="collapse fade show container-xl p-0">
+      <div class="row g-0 justify-content-center">
+        <div class="col col-xl-6">
+          
+          <div class="d-flex flex-column p-3">
+            <div class="p-3 p-xl-4 bg-white border shadow-sm rounded-3">
+              <div class="text-center mb-2 fs-6 fs-xl-4">會員登入</div>
+              <div class="p-2 px-xl-4">
+                <div class="input-group mb-3 mb-xl-4">
+                  <span class="input-group-text fs-7" id="userID">帳號</span>
+                  <input type="text" class="form-control" placeholder="請輸入身分證號或居留證號">
+                </div>
+                
+                <div class="input-group mb-3 mb-xl-4">
+                  <span class="input-group-text fs-7" id="userPassword">密碼</span>
+                  <input type="password" class="form-control" placeholder="">
+                </div>
+
+                
+                <div class="input-group mb-3 mb-xl-4">
+                  <div class="border rounded-start input-group-validate"><img src="common/images/validateCode.do.jpg"></div>
+                  <input type="text" class="form-control fs-7" placeholder="輸入驗證碼" id="inputValidateCode">
+                  <button class="btn btn-secondary fs-7 py-2" type="button">重新產生</button>
+                </div>
+                
+
+                <div class="d-flex justify-content-end mb-3 mb-xl-4">
+                  <div class="form-check form-switch form-switch-md d-flex align-items-center mb-0">
+                    <input class="form-check-input" type="checkbox" id="rememberMyAccount">
+                    <label class="form-check-label ms-2" for="rememberMyAccount">記住我的帳號</label>
+                  </div>
+                </div>
+
+
+
+                <button class="btn btn-danger rounded-pill w-100 mb-3 mb-xl-0 fs-xl-5" type="button" onclick="showFillOutSection()">登入</button>
+
+                
+              </div>
+
+            </div>
+          </div>
+
+          
+          <div class="px-3 mb-3">
+            <div class="p-3 bg-white border shadow-sm rounded-3">
+              <div class="d-flex justify-content-around align-items-center">
+                <div class="d-flex">
+                  <button type="button" class="d-inline-flex flex-column justify-content-center align-items-center btn" onclick="location.href='signUp.html'"><span class="feather icon-user-plus fs-1"></span><span class="fs-7">加入會員</span></button>
+                </div>
+                <div class="d-flex">
+                  <button type="button" class="d-inline-flex flex-column justify-content-center align-items-center btn" onclick="location.href='passwordRecovery.html'"><span class="feather icon-unlock fs-1"></span><span class="fs-7">忘記密碼</span></button>
+                </div>
+                <div class="d-flex">
+                  <button type="button" class="d-inline-flex flex-column justify-content-center align-items-center btn" onclick="location.href='resendCode.html'"><span class="feather icon-send fs-1"></span><span class="fs-7">重發認證碼</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+  
+    <!-- 資料填寫區塊(登入後才顯示) -->
+    <div id="fillOutSection" class="collapse fade container-xl p-0">
+      <div class="row g-0 justify-content-center">
+        <div class="col col-xl-6">
+          <div class="d-flex flex-column p-3 mb-2 mb-xl-4">
+            
+            <div class="p-3 bg-white border shadow-sm rounded-3">
+              <p>請填寫您的收件資料，以利後續作業。</p>
+              <div class="pb-2">
+                <div class="input-group mb-3">
+                  <label class="input-group-text fs-7" for="userName">姓&emsp;&emsp;名</label>
+                  <input type="text" class="form-control" placeholder="請輸入收件人姓名" id="userName">
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text fs-7" for="userCity1">縣&emsp;&emsp;市</label>
+                  <select class="form-select" id="userCity1">
+                    <option value="1" selected>台北市</option>
+                    <option value="2">新北市</option>
+                    <option value="3">桃園市</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text fs-7" for="userCity2">鄉鎮市區</label>
+                  <select class="form-select" id="userCity2">
+                    <option value="1" selected>大安區</option>
+                    <option value="2">南港區</option>
+                    <option value="3">信義區</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text fs-7" id="userAddress">地&emsp;&emsp;址</span>
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="text-danger fs-7 mb-3">※收件地址限台灣本島</div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text fs-7" for="userMobile">聯絡電話</label>
+                  <input type="text" class="form-control" placeholder="請填寫手機或市話" id="userMobile">
+                </div>
+              </div>
+              <!--隱私權政策確認 -->
+              <div class="pb-2">
+                <div class="d-flex justify-content-start mb-3">
+                  <div class="form-check form-switch form-switch-md d-flex align-items-center mb-0">
+                    <input class="form-check-input" type="checkbox" id="privacyAgreement" checked>
+                    <label class="form-check-label ms-2" for="privacyAgreement">我同意隱私權政策</label>
+                    <button class="btn d-flex align-items-center fs-7" type="button" data-bs-toggle="modal" data-bs-target="#agreementModal"><span class="feather icon-chevrons-right fs-6"></span><u>說明</u></button>
+                  </div>
+                </div>
+                <button id="btnSubmit" class="btn btn-danger rounded-pill w-100 fs-xl-5" type="button" onclick="submitCheck()">送出</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	</main>
+
+	<!-- footer NEW -->
+  <footer>
+    <div class="bg-gainsboro p-3 pt-4 py-xl-4 pt-xl-5">
+      <div class="container-xl">
+        <div class="row row-cols-2 row-cols-xl-4">
+          <div class="col">
+            <h6>關於我們</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="aboutCompany.html">企業資訊</a></li>
+              <li class="mb-2"><a href="businessPartner.html">廠商合作</a></li>
+              <li class="mb-2"><a href="https://www.104.com.tw/company/dc7d2u8" target="_blank">企業徵才</a></li>
+              <li class="mb-2"><a href="https://www.instagram.com/vivatvsh/?hl=zh-tw" target="_blank">主持群</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h6>售後服務</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="memberFAQ.html#faqCollapse-5">取消/換貨/退貨</a></li>
+              <li class="mb-2"><a href="memberFAQ.html#faqCollapse-6">商品鑑賞期</a></li>
+              <li class="mb-2"><a href="invoiceFAQ.html">電子發票</a></li>
+              <li class="mb-2"><a href="guestMessage.html">聯絡我們</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h6>常見問題</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="memberFAQ.html">新手上路</a></li>
+              <li class="mb-2"><a href="shoppingGuide.html">購物指南</a></li>
+              <li class="mb-2"><a href="couponFAQ.html">優惠金使用說明</a></li>
+              <li class="mb-2"><a href="memberNewRule.html">會員分級新制辦法</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h6>會員權益</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="privacyPolicy.html">隱私權保護政策</a></li>
+              <li class="mb-2"><a href="lawStatement.html">個資保護專區</a></li>
+              <li class="mb-2"><a href="audienceReport.html">閱聽人意見服務報告</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-independence py-3">
+      <div class="container-xl">
+        <div class="row">
+          <div class="col d-flex flex-column flex-xl-row justify-content-center align-items-center text-white fs-75">
+            <div class="mx-1">美好家庭購物股份有限公司版權所有</div>
+            <div>&copy;2020 Shopnet Homeshopping co., Ltd. All Rights Reserved.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 下方導覽列 NEW -->
+  <div id="bottomNavNew" class="position-fixed bg-dark-theme py-xl-3 shadow-lg">
+    <div id="bottomNavGrid">
+
+      
+      <div id="History" class="collapse fade w-100 bg-light overflow-hidden">
+        <div class="d-flex d-xl-none justify-content-xl-center p-3 pb-1 fs-75">瀏覽紀錄</div>
+        <div id="swpHistory" class="d-flex p-3 pt-1 p-xl-1 p-xxl-2 position-relative">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="productPage.html">
+                  <div class="d-flex flex-column">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/300/300" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="p-1 p-price d-block d-xl-none">2280</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="productPage.html">
+                  <div class="d-flex flex-column">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/300/300" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="p-1 p-price d-block d-xl-none">2280</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="productPage.html">
+                  <div class="d-flex flex-column">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/300/300" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="p-1 p-price d-block d-xl-none">2280</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="productPage.html">
+                  <div class="d-flex flex-column">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/300/300" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="p-1 p-price d-block d-xl-none">2280</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="productPage.html">
+                  <div class="d-flex flex-column">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/300/300" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="p-1 p-price d-block d-xl-none">2280</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="productPage.html">
+                  <div class="d-flex flex-column">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="https://picsum.photos/300/300" class="img-fluid lazy-load" width="300" height="300" alt="placeholder image">
+                    <div class="p-1 p-price d-block d-xl-none">2280</div>
+                  </div>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="vertical-button-prev"><span class="feather icon-chevron-up"></span></div>
+          <div class="vertical-button-next"><span class="feather icon-chevron-down"></span></div>
+        </div>
+      </div>
+      
+
+      <div id="bottomNavBtn1" class="d-flex justify-content-center py-xl-1 py-xxl-2" title="瀏覽紀錄">
+        <button id="toggleHistory" class="d-flex flex-column align-items-center justify-content-center btn text-white rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#History"><span class="feather icon-clock"></span><span class="d-inline d-xl-none d-xxl-inline fs-75">瀏覽紀錄</span></button>
+      </div>
+
+      <div id="bottomNavBtn2" class="d-flex justify-content-center py-xl-1 py-xxl-2" title="刷卡優惠">
+        <button id="toggleCardCampaign" class="d-inline-flex flex-column align-items-center justify-content-center btn text-white rounded-0" type="button"><span class="feather icon-credit-card"></span><span class="d-inline d-xl-none d-xxl-inline fs-75">刷卡優惠</span></button>
+      </div>
+
+      <div id="bottomNavBtn3" class="d-flex justify-content-center py-xl-1 py-xxl-2" title="訂單查詢">
+        <button id="toggleOrderTracking" class="d-inline-flex flex-column align-items-center justify-content-center btn text-white rounded-0" type="button" onclick="location.href='orderTracking.html'"><span class="feather icon-file-text"></span><span class="d-inline d-xl-none d-xxl-inline fs-75">訂單查詢</span></button>
+      </div>
+      
+      <div id="bottomNavBtn4" class="d-flex justify-content-center py-xl-1 py-xxl-2" title="會員專區">
+        <button id="toggleMemberSection" class="d-inline-flex flex-column align-items-center justify-content-center btn text-white rounded-0" type="button" onclick="location.href='memberPortal.html'"><span class="feather icon-user"></span><span class="d-inline d-xl-none d-xxl-inline fs-75">會員專區</span></button>
+      </div>
+      
+      <div id="bottomNavBtn5" class="d-none justify-content-center d-xl-flex py-xl-1 py-xxl-2" title="TOP">
+        <button id="scrollToTopDesktop" class="d-inline-flex flex-column align-items-center justify-content-center btn text-white rounded-0" type="button"><span class="feather icon-chevron-up"></span><span class="d-inline d-xl-none d-xxl-inline fs-75">&emsp;TOP&emsp;</span></button>
+      </div>
+
+    </div>
+  </div>
+
+  
+
+  
+
+  <!-- 未同意隱私權政策modal -->
+  <div class="modal fade" id="disagreeModal" tabindex="-1" aria-labelledby="disagreeModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-0">
+        <div class="modal-body">
+          <div class="d-flex flex-column justify-content-center">
+            <div class="text-danger text-center my-2"><span class="feather icon-alert-triangle fs-1"></span></div>
+            <div class="text-center"><span class="fs-65">請您同意隱私權政策，以利後續作業。</span></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger rounded-pill w-100" data-bs-dismiss="modal">確定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 資料已送出modal -->
+  <div class="modal fade" id="submitSuccessModal" tabindex="-1" aria-labelledby="submitSuccessModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-0">
+        <div class="modal-body">
+          <div class="d-flex flex-column justify-content-center">
+            <div class="text-center my-2"><span class="feather icon-check-circle fs-1"></span></div>
+            <div class="text-center"><span class="fs-65">資料已送出，感謝您的登記。</span></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger rounded-pill w-100" onclick="location.href='Home.html'">確定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- 隱私權保護政策modal -->
+  <div class="modal fade" id="agreementModal" tabindex="-1" aria-labelledby="agreementModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content rounded-0">
+        <div class="modal-header">
+          <h6 class="modal-title">隱私權保護政策</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5 class="text-center">美好家庭購物股份有限公司隱私權保護政策</h5>
+          <p>非常歡迎您光臨美好家庭購物股份有限公司 / ViVa TV電視購物(下簡稱本公司)非常重視使用者資訊的保護，特制定本政策以維護個人資料並尊重使用者之線上隱私權。本政策保障及適用範圍包括使用者因使用本公司各項服務(包含ViVa TV電視購物、ViVa TV美好生活誌、ViVa TV購物網站及ViVa TV其他延伸通路時)所提供的資料，同時也適用於本公司因與商業夥伴合作時所取得資料。</p>
+          <h6>一、資料蒐集方式</h6>
+          <ol>
+            <li>使用者主動提供之資料
+              <ol>
+                <li>姓名、住址、電話號碼、電子郵件信箱、職業/銜、出生年月日、性別、信用卡資料、聯絡方式等其他相關資訊係來自於您主動提供或參加本公司透過人員、電話、網路、語音訂購或其他方式之服務或活動時所提供或從其他合法且公開管道而取得之資料。</li>
+                <li>本公司因他人指定向客戶送達贈禮、賀卡等物品，而取得客戶姓名、住所、電話號碼、電子郵件信箱、職業/銜、工作地點或其他相關資訊(簡稱「配送資訊」)。</li>
+              </ol>
+            </li>
+            <li>因利用本公司服務所取得之資訊
+              <ol>
+                <li>使用者對本公司提供之商品或勞務，為購買、參加抽獎活動或申請其他交易時之客戶識別資訊及其相對應之交易記錄資料。</li>
+                <li>訂閱本公司電子報(EDM)、美好生活誌(DM)之相關資訊。</li>
+                <li>獲得ViVa TV 禮金、購物金、商品抵用金之相關資訊。</li>
+                <li>以電話、電子郵件或其他方法，向本公司提出問題、參與民調或活動、利用留言或進行服務評價時，其發言或記載內容之相關資訊。</li>
+              </ol>
+            </li>
+            <li>因瀏覽頁面而自動取得之資訊
+              <ol>
+                <li>使用者電腦連線上網時之IP位址、手機端之機體識別之相關資訊。</li>
+                <li>於使用者進入本公司經營之網頁時，自動取得之客戶瀏覽器種類、版本、作業系統、平台等資訊外，使用者瀏覽之網頁（URL）、瀏覽時間、輸入或檢索之商品等相關資訊。</li>
+              </ol>
+            </li>
+            <li>Cookie之使用
+              <ol>
+                <li>為了提供您更完善的服務，本網站透過第三方Google Analytics（分析）來瞭解您照訪網站的興趣類別、以及您的年齡、性別等資訊，作為客層分析及本網站內容與系統改進之用，不會涉及網站訪客(非會員)的個人身分資料，請您放心。</li>
+                <li>相關Google Analytics（分析）隱私權政策與如何拒絕向Google Analytics（分析）透露資訊，您可直接前往Google Analytics（分析）隱私權政策網頁瀏覽進行瞭解。</li>
+              </ol>
+            </li>
+          </ol>
+          <p>除上述之外，因使用者在註冊帳號、瀏覽網頁、參加網站上相關活動遊戲或使用者要求加入會員、使用電子郵件服務或其他服務時，本公司會取得蒐集個人識別資料，也會自動記錄接收使用者上站的位址、瀏覽器上的伺服器數值、使用cookie或web beacon技術所取得之瀏覽資訊、網頁紀錄以及相關資料等，但是這些資料僅供作網路流量分析和網路行為調查，以便改進網站的整體服務品質，並不會因而和使用者產生特定關聯或識別性。</p>
+          <h6>附註: Cookie技術之使用</h6>
+          <p>Cookie是從Web伺服器傳送到您的瀏覽器並保存在您電腦硬碟中的簡短資料，本公司網站使用Cookie作為與您溝通與辨識的工具，目的在於訂購安全之驗証、記錄您商品喜好、保障交易安全及利於提供您「個人化」服務或遞送符合您興趣、嗜好的廣告。Cookie不會紀錄您的個人資料，如果您不希望接受Cookie，可自行關閉瀏覽器上的Cookie功能，但此將導致您無法順利登入本公司購物網站或無法使用會員專區，例如：訂購、購物車、我的帳戶等各項服務。</p>
+          <h6>二、資料蒐集之目的</h6>
+          <p>主要為行銷、會員管理、消費者、客戶管理與服務等其他本公司為遂行交易完成或提供售後服務所必要之目的。</p>
+          <h6>三、個人資料保有之特定目的(完整內容詳參本公司網站個資保護專區)</h6>
+          <p>本公司所保有(含蒐集/處理/利用)個人資料之特定目的約略例示如下:<br>040行銷、067 信用卡、現金卡、轉帳卡或電子票證業務、090消費者、客戶管理與服務、091消費者保護、098商業與技術資訊、107採購與供應管理、125傳播行政與管理、129會計與相關服務、136資(通)訊與資料庫管理、157調查、統計與研究分析、181 其他經營合於營業登記項目或組織章程所定之業務、182其他諮詢與顧問服務..等。</p>
+          <h6>四、個人資料之類別(完整內容詳參本公司網站個資保護專區)</h6>
+          <p>本公司所蒐集個人資料之類別約略例示如下：C001/辨識個人者、C002/辨識財務者、C003/政府資料中之辨識者、C011/個人描述、C031/住家及設施、C033/移民情形、C034/旅行及其他遷徙細節、C038/職業、CO93/財務交易、C102/約定或契約、C132/未分類之資料等。</p>
+          <h6>五、資料檔案之保有期限：本公司營運期間。</h6>
+          <h6>六、地區：您的資料將用於本公司營運地區。</h6>
+          <h6>七、資料儲存及保管方式</h6>
+          <p>本公司取得您的資料後，將依相關作業規範建檔並儲存於資料庫，同時依ISO27001有關規範控管您的資料之存取，除本公司員工於各該業務範圍內得合法使用各該資料外，非經同意不得取得與使用您的資料。</p>
+          <h6>八、資料安全及保護方法</h6>
+          <p>本公司對保有的個人資料，將盡力以合理之技術及程序辦理安全維護事項(例如：您的帳號會員資料會用密碼保護。在傳輸時使用SSL(Secure Sockets Layer)技術進行加密，並設有防火牆以防止第三人不法入侵或內部人非法使用防止個人資料被竊取、竄改、毀損、滅失或洩漏，並保障資料傳送的安全。</p>
+          <h6>附註:自我保護措施</h6>
+          <p>請妥善保管您的憑證、會員帳號密碼或任何個人資料，不要將任何個人資料，尤其是帳號密碼提供給任何人或其他機構。在您使用完本網站所提供的各項服務功能後，請務必記得登出帳戶，若您是與他人共享電腦或使用公共電腦，切記要關閉瀏覽器視窗，以防止他人讀取您的個人資料。</p>
+          <h6>九、利用對象及方式</h6>
+          <p>您的資料蒐集後於達成利用目的之必要範圍內除用於本公司(含關係企業)之會員管理、客戶管理之檢索查詢等功能外，尚有以下利用方式：</p>
+          <ol>
+            <li>物品寄送：於交寄相關商品或活動之贈品時，需將您的資料利用於交付給相關物流、郵寄廠商用於物品寄送目的。</li>
+            <li>金融交易及授權：您所提供之財務相關資訊，將於金融交易過程(例如信用卡授權、轉帳)時提交給金融機構以完成金融交易。</li>
+            <li>宣傳廣告或行銷等：本公司將利用您之地址及郵件、電話號碼等進行商品或活動宣傳或提供客戶各種電子資訊等與服務有關之行銷資訊或針對民調、活動、留言版等之意見資訊交換等服務關連事項與客戶進行聯繫。</li>
+            <li>商業及市場的分析:將客戶所瀏覽之內容或廣告，依客戶之性別、年齡、居住地、興趣、嗜好等個人屬性或購買紀錄、網站之瀏覽紀錄等項目，進行客戶使用服務之分析、新服務之開發或既有服務之改善等。</li>
+            <li>其他業務附隨之事項：附隨於上述1至4之利用方式而為提供服務所必要。</li>
+          </ol>
+          <h6>十、本公司提供資料予第三人的情形</h6>
+          <ol>
+            <li>於上開特定目的範圍內利用。</li>
+            <li>合於個人資料保護法第20條但書規定為特定目的外之利用。</li>
+            <li>基於法律之規定或受司法機關與其他有權機關基於法定程序之要求。</li>
+            <li>在緊急情況下為維護其他會員或第三人之合法權益。</li>
+            <li>為維護會員服務系統的正常運作。</li>
+            <li>會員透過本服務購物、兌換贈品、參加抽獎活動等因而產生的金/物流之必要資訊。</li>
+          </ol>
+          <h6>十一、客戶權利行使方式</h6>
+          <p>如您欲行使個人資料保護法第三條所賦予之權利時，您可透過我們提供的服務管道（0809-053-888）來電客服人員經確認身分無誤後，本公司將迅速進行處理；惟申請查詢或請求閱覽個人資料或製給複製本時，本公司得視情形酌收相當工本費用。</p>
+          <h6>十二、資料選擇性提供之權益影響</h6>
+          <p>加入會員時所需填具之個人資料欄位均為必填欄位，若您拒絕提供時，本公司將無法提供您妥善完整之服務。</p>
+          <h6>十三、隱私權保護政策之修訂</h6>
+          <p>本公司為因應社會環境變遷、業務需求、科技發展與法令修改等，將不定時修訂與公布隱私權保護政策。</p>
+          <p class="text-right">2012年10月1日修訂1版</p>
+          <p class="text-center">以上揭露資訊屬於「美好家庭購物股份有限公司」所有，請尊重智財權！</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary rounded-pill w-100" data-bs-dismiss="modal">確定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+	
+
+  <!-- 購物車(有商品情況) --> 
+  <div class="modal fade" id="shoppingCart" tabindex="-1" aria-labelledby="shoppingCart" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content rounded-0">
+        <div class="modal-header">
+          <span class="modal-title fs-6">購物車</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="shoppingCartList" class="modal-body p-2">
+          <!-- 商品 -->
+          <div class="d-flex flex-column p-3 cart-item">
+            <!-- 商品圖、品名、折扣 -->
+            <div class="d-flex pb-2">
+              <div class="col-3"><a href="productPage.html"><img src="https://www.vivatv.com.tw/common/images/product/2948862020/1.jpg" class="img-fluid"></a></div>
+              <div class="d-flex col-9">
+                <div class="d-flex flex-column justify-content-between">
+                  
+                  <div class="px-2 pb-1 p-name-1">ISA KNOX車醫院活性幹細胞熱銷回饋組123456</div>
+                  <div class="d-inline px-2 pb-1">規格：<span>無</span></div>
+                  <div class="d-flex flex-wrap align-items-center ps-2 pe-0 fs-6">
+                    <div class="bg-discount lh-1 pe-2 px-2 py-2 text-white fs-7">85折</div>
+                    <div class="px-2 py-1 m-1 rounded border fs-7">第二件起79折($5214)</div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <!-- 數量、小計、加入收藏、刪除 -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center select-quantity" data-price="6600">
+                <div class="d-flex me-2">
+                  <div class="input-group">
+                    <label class="input-group-text fs-7">數量</label>
+                    <select class="form-select fs-7">
+                      <option value="1" selected>1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="d-flex"><span class="me-1">小計</span><span class="fs-6 p-price lh-1 pe-2 subtotal">6600</span></div>
+              </div>
+              <div class="d-flex">
+                <div class="input-group">
+                  <button class="btn" type="button" onclick="toggleFav(this)" data-fav="false"><span class="feather icon-heart"></span></button>
+                  <button class="btn pe-0" type="button" onclick="removeFromCart(this);"><span class="feather icon-trash-2"></span></button>
+                </div>  
+              </div>
+            </div>
+          </div>
+          <!-- 商品 -->
+          <div class="d-flex flex-column p-3 cart-item">
+            <!-- 商品圖、品名、折扣 -->
+            <div class="d-flex pb-2">
+              <div class="col-3"><a href="productPage.html"><img src="https://www.vivatv.com.tw/common/images/product/2965992021/1.jpg" class="img-fluid"></a></div>
+              <div class="d-flex col-9">
+                <div class="d-flex flex-column justify-content-between">
+                  
+                  <div class="px-2 pb-1 p-name-1">日本藤田Comfit涼感透氣支撐床墊-加大</div>
+                  <div class="d-inline px-2 pb-1">規格：<span>無</span></div>
+                  <div class="d-flex flex-wrap align-items-center ps-2 pe-0 fs-6">
+                    <div class="px-2 py-1 m-1 rounded border fs-7">結帳折100</div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <!-- 數量、小計、加入收藏、刪除 -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center select-quantity" data-price="3570"> 
+                <div class="d-flex me-2">
+                  <div class="input-group">
+                    <label class="input-group-text fs-7">數量</label>
+                    <select class="form-select fs-7">
+                      <option value="1" selected>1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="d-flex"><span class="me-1">小計</span><span class="fs-6 p-price lh-1 pe-2 subtotal">3570</span></div>
+              </div>
+              <div class="d-flex">
+                <div class="input-group">
+                  <button class="btn" type="button" onclick="toggleFav(this)" data-fav="false"><span class="feather icon-heart"></span></button>
+                  <button class="btn pe-0" type="button" onclick="removeFromCart(this);"><span class="feather icon-trash-2"></span></button>
+                </div>  
+              </div>
+            </div>
+          </div>
+          <!-- 商品 -->
+          <div class="d-flex flex-column p-3 cart-item">
+            <!-- 商品圖、品名、折扣 -->
+            <div class="d-flex pb-2">
+              <div class="col-3"><a href="productPage.html"><img src="https://www.vivatv.com.tw/common/images/product/2969292021/1.jpg" class="img-fluid"></a></div>
+              <div class="d-flex col-9">
+                <div class="d-flex flex-column justify-content-between">
+                  
+                  <div class="px-2 pb-1 p-name-1">TAKURA田倉零重力全包覆溫揉按摩椅</div>
+                  <div class="d-flex px-2 pb-1">規格：<span>白+橘</span></div>
+                  <div class="d-flex flex-wrap align-items-center ps-2 pe-0 fs-6">
+                    <div class="px-2 py-1 m-1 rounded border fs-7">結帳折100</div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <!-- 數量、小計、加入收藏、刪除 -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center select-quantity" data-price="23800">
+                <div class="d-flex me-2">
+                  <div class="input-group">
+                    <label class="input-group-text fs-7">數量</label>
+                    <select class="form-select fs-7">
+                      <option value="1" selected>1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="d-flex"><span class="me-1">小計</span><span class="fs-6 p-price lh-1 pe-2 subtotal">23800</span></div>
+              </div>
+              <div class="d-flex">
+                <div class="input-group">
+                  <button class="btn" type="button" onclick="toggleFav(this)" data-fav="false"><span class="feather icon-heart"></span></button>
+                  <button class="btn pe-0" type="button" onclick="removeFromCart(this);"><span class="feather icon-trash-2"></span></button>
+                </div>  
+              </div>
+            </div>
+          </div>
+          <!-- 商品 -->
+          <div class="d-flex flex-column p-3 cart-item">
+            <!-- 商品圖、品名、折扣 -->
+            <div class="d-flex pb-2">
+              <div class="col-3"><a href="productPage.html"><img src="https://www.vivatv.com.tw/common/images/product/2933932020/1.jpg" class="img-fluid"></a></div>
+              <div class="d-flex col-9">
+                <div class="d-flex flex-column justify-content-between">
+                  
+                  <div class="px-2 pb-1 p-name-1">雅詩蘭黛 明星特潤小棕瓶全新升級版</div>
+                  <div class="d-inline px-2 pb-1">規格：<span>無</span></div>
+                  <div class="d-flex flex-wrap align-items-center ps-2 pe-0 fs-6">
+                    <div class="px-2 py-1 m-1 rounded border fs-7">結帳折100</div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <!-- 數量、小計、加入收藏、刪除 -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center select-quantity" data-price="7990">
+                <div class="d-flex me-2">
+                  <div class="input-group">
+                    <label class="input-group-text fs-7">數量</label>
+                    <select class="form-select fs-7">
+                      <option value="1" selected>1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="d-flex"><span class="me-1">小計</span><span class="fs-6 p-price lh-1 pe-2 subtotal">7990</span></div>
+              </div>
+              <div class="d-flex">
+                <div class="input-group">
+                  <button class="btn" type="button" onclick="toggleFav(this)" data-fav="false"><span class="feather icon-heart"></span></button>
+                  <button class="btn pe-0" type="button" onclick="removeFromCart(this);"><span class="feather icon-trash-2"></span></button>
+                </div>  
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+        <div class="modal-footer p-2 pt-0">
+          <div class="d-flex flex-column w-100">
+            <div class="d-flex justify-content-between align-items-center p-2 fs-6">
+              <div class="d-flex align-items-center">
+                <span>共</span>
+                <span class="text-danger mx-2 fs-5" id="cartItemAmount"></span>
+                <span>件商品</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <span>合計</span>
+                <span class="p-price mx-1 fs-5" id="Total"></span>  
+              </div>
+            </div>
+            <div class="d-flex justify-content-between flex-column">
+              <button type="button" class="btn btn-danger rounded-pill m-1" onclick="location.href='checkOut1.html'">下一步</button>
+              <button type="button" class="btn btn-outline-secondary rounded-pill m-1" data-bs-dismiss="modal">繼續購物</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 會員登入modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content rounded-0">
+
+        <div class="modal-header">
+          <span class="modal-title fs-6 fs-xl-5">會員登入</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <!-- 登入功能 -->
+          <div class="d-flex flex-column p-xl-3">
+
+            <div class="input-group mb-3 mb-xl-4">
+              <span class="input-group-text fs-7" id="userID">帳號</span>
+              <input type="text" class="form-control" placeholder="請輸入身分證號或居留證號">
+            </div>
+            
+            <div class="input-group mb-3 mb-xl-4">
+              <span class="input-group-text fs-7" id="userPassword">密碼</span>
+              <input type="password" class="form-control" placeholder="">
+            </div>
+
+            <!-- 輸入驗證碼 -->
+            <div class="input-group mb-3 mb-xl-4">
+              <div class="border rounded-start input-group-validate"><img src="common/images/validateCode.do.jpg"></div>
+              <input type="text" class="form-control fs-7" placeholder="輸入驗證碼" id="inputValidateCode">
+              <button class="btn btn-secondary fs-7 py-2" type="button">重新產生</button>
+            </div>            
+
+            <div class="d-flex justify-content-end">
+              <div class="form-check form-switch form-switch-md d-flex align-items-center mb-0">
+                <input class="form-check-input" type="checkbox" id="rememberMyAccount">
+                <label class="form-check-label ms-2" for="rememberMyAccount">記住我的帳號</label>
+              </div>
+            </div>
+
+            <!-- 錯誤訊息 -->
+            <!-- <div class="d-flex rounded border border-danger justify-content-center align-items-center p-2 text-danger">
+              <span class="feather icon-x-octagon fs-5 me-1"></span><span class="fs-7">登入錯誤訊息</span>
+            </div> -->
+            
+          </div>
+        </div>
+
+        <div class="modal-footer p-2">
+          <div class="d-flex flex-column w-100">
+            <div class="d-flex justify-content-between flex-column">
+              <div class="btn-group p-2" role="group">
+                <button class="btn btn-danger rounded-pill w-100 fs-xl-5" type="button" data-bs-dismiss="modal" onclick="showFillOutSection()">登入</button>
+              </div>
+              <div class="btn-group p-2" role="group">
+                <button class="btn btn-outline-secondary rounded-pill-start fs-xl-6" type="button" data-bs-dismiss="modal" onclick="location.href='passwordRecovery.html'">忘記密碼</button>
+                <button class="btn btn-outline-secondary rounded-0 fs-xl-6" type="button" data-bs-dismiss="modal" onclick="location.href='resendCode.html'">重發認證碼</button>
+                <button class="btn btn-outline-secondary rounded-pill-end fs-xl-6" type="button" data-bs-dismiss="modal" onclick="location.href='signUp.html'">加入會員</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+<!-- JS -->
+<script src="common/bootstrap-5.0.0-beta3-dist/js/bootstrap.bundle.js"></script>
+<script src="common/js/jquery-1.11.3.min.js"></script>
+<script src="common/js/swiper-bundle.min.js"></script>
+<script src="common/js/dayjs.min.js"></script>
+<script src="common/js/main.js?v72"></script>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+.electronic-invoice .d-flex.justify-content-center.mt-3.pt-4.border-top,
+.proof-of-purchase .d-flex.justify-content-center.mt-4.pt-4.border-top {
+	display: none!important;
+}

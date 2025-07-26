@@ -1,0 +1,14 @@
+<style type="text/css">
+  /*保留換行符號*/
+  #productSpec .list-group-item {
+    white-space: pre-line;
+  }
+</style>
+
+<script type="text/javascript">
+  //移除商品規格中，每個list-group-item的第一行空白
+  var preElements = document.querySelectorAll('#productSpec .list-group-item');
+  Array.prototype.forEach.call(preElements, function( pre ){
+    pre.textContent = pre.textContent.replace(/^\s+/, '');
+  });
+</script>

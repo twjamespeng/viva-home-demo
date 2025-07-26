@@ -1,0 +1,182 @@
+/*dark mode*/
+body.dark-mode main {
+	background-color: #000;
+	background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
+	background-repeat: repeat;
+	background-attachment: fixed!important;
+}
+
+body.dark-mode #cakeSection a {
+	color: #fff;
+}
+body.dark-mode #heroSection {
+	background: transparent;
+}
+body.dark-mode footer .bg-gainsboro {
+	background: #464646!important;
+}
+body.dark-mode footer,
+body.dark-mode footer a {
+	color: #fff;
+}
+body.dark-mode #functionBar {
+	background: #f7f8f9;
+}
+body.dark-mode .bg-post {
+	background-color: #111111;
+	background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
+	background-attachment: fixed!important;
+	color: #fff;
+}
+body.dark-mode .bg-member-portal {
+	background-color: transparent;
+	background-image: none;
+	background-attachment: fixed!important;
+	
+}
+body.dark-mode #btnReadMore {
+	color: #fff;
+	border-color: #fff;
+}
+body.dark-mode div.d-flex.justify-content-center.mb-3.mb-xl-5 div.col-12.col-md-8.col-xl-6.px-3 button.btn.btn-outline-secondary.rounded-pill.w-100.fs-6.fs-xl-5,
+body.dark-mode div.d-flex.mb-3.mb-xl-5.px-3.justify-content-center div.btn-group.col.col-xl-6 button.btn.btn-outline-secondary.rounded-pill-start.w-50.fs-xl-5,
+body.dark-mode div.d-flex.mb-3.mb-xl-5.px-3.justify-content-center div.btn-group.col.col-xl-6 button.btn.btn-outline-secondary.rounded-pill-end.w-50.fs-xl-5,
+body.dark-mode div.container-xl.px-3.mb-3.mb-xl-5 div.row.g-0.justify-content-center div.col.col-xl-6 button.btn.btn-outline-secondary.rounded-pill.w-100.fs-xl-5,
+body.dark-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-8 div.d-flex.mb-3.px-3.mb-xl-5 div.btn-group.w-100 button.btn.btn-outline-secondary.w-50.fs-xl-5.rounded-pill-start,
+body.dark-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-8 div.d-flex.mb-3.px-3.mb-xl-5 div.btn-group.w-100 button.btn.btn-outline-secondary.w-50.fs-xl-5.rounded-pill-end,
+body.dark-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-12 div.container-xl.px-3.mb-3.mb-xl-5 div.row.g-0.justify-content-center div.col.col-xl-3 button.btn.btn-outline-secondary.rounded-pill.w-100.fs-xl-5 {
+	color: #fff;
+	border-color: #fff;
+}
+body.dark-mode #checkOutStep {
+	color: #fff;
+}
+body.dark-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-9 div.d-flex.flex-column.p-3.mb-xl-4 div.text-center.mb-2.fs-6.fs-xl-4.mb-xl-4,
+body.dark-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-8 div.d-flex.flex-column.p-3.mb-xl-3 div.text-center.mb-2.fs-6.fs-xl-4.mb-xl-4,
+body.dark-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-12 div.d-flex.flex-column.p-3.mb-xl-4 div.text-center.mb-2.fs-6.fs-xl-4.mb-xl-4,
+body.dark-mode div.container-xl.p-0 div.row.g-0.justify-content-center div.col.col-xl-10 div.d-flex.flex-column.p-3.mb-xl-4 div.text-center.mb-2.fs-6.fs-xl-4.mb-xl-4 {
+	color: #fff;
+}
+
+body.dark-mode #hotSale > .p-2.fs-6,
+body.dark-mode #newArrival > .p-2.fs-6 {
+	color: #fff;
+}
+
+body.dark-mode .swiper-fluid .swiper-slide {
+	transition: all .5s linear;
+}
+body.dark-mode .swiper-fluid .swiper-slide-prev,
+body.dark-mode .swiper-fluid .swiper-slide-next {
+	/*filter: brightness(15%);*/
+}
+
+body.dark-mode #swpMain .swiper-container:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background-color: #1f1f22;
+	z-index: 98;
+}
+body.dark-mode #swpMain .swiper-container:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 100%;
+	background-color: #1f1f22;
+	z-index: 98;
+}
+
+
+
+
+body.dark-mode #swpMain.swiper-fluid {
+	opacity: 0;
+	transition: all .5s linear;
+	background-color: #1f1f22;
+}
+
+body.dark-mode #swpMain:before {
+	content: '';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+  	background-image: url(https://www.vivatv.com.tw/common/images/event/overlay-blackfriday-1200x720.png);
+  	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-position: center;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 98;
+	pointer-events: none;
+	user-select: none;
+}
+
+@media (min-width: 1200px) {
+	body.dark-mode #swpMain:before {
+		width: 76%;
+		left: 50%;
+		transform: translateX(-50%);
+		/*background-image: url(../images/overlay-blackfriday-1400x560.png);*/
+		background-image: url(https://www.vivatv.com.tw/common/images/event/overlay-blackfriday-1600x560.png);
+	  	background-size: cover;
+	  	background-repeat: no-repeat;
+	  	background-position: center;
+	}
+	body.dark-mode #swpMain .swiper-container:before,
+	body.dark-mode #swpMain .swiper-container:after {
+		width: 13.25%;
+	}
+	body.dark-mode #swpMain .swiper-button-prev {
+		left: 8%;
+	}
+	body.dark-mode #swpMain .swiper-button-next {
+		right: 8%;
+	}
+}
+@media (min-width: 1900px) {
+	body.dark-mode #swpMain:before {
+		width: 68%;
+	}
+	body.dark-mode #swpMain .swiper-container:before,
+	body.dark-mode #swpMain .swiper-container:after {
+		width: 16.25%;
+	}
+	body.dark-mode #swpMain .swiper-button-prev {
+		left: 12%;
+	}
+	body.dark-mode #swpMain .swiper-button-next {
+		right: 12%;
+	}
+}
+@media (min-width: 2500px) {
+	body.dark-mode #swpMain:before {
+		width: 60%;
+	}
+	body.dark-mode #swpMain .swiper-container:before,
+	body.dark-mode #swpMain .swiper-container:after {
+		width: 20.25%;
+	}
+	body.dark-mode #swpMain .swiper-button-prev {
+		left: 19%;
+	}
+	body.dark-mode #swpMain .swiper-button-next {
+		right: 19%;
+	}
+}
+
+body.dark-mode #swpMain .swiper-button-prev,
+body.dark-mode #swpMain .swiper-button-next {
+	z-index: 102;
+}
+

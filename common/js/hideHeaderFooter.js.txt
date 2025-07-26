@@ -1,0 +1,25 @@
+// 隱藏header, footer及其它不需要出現的元素
+const arr = [
+'#topNav',
+'#campaignLinkAndSearch',
+'#desktopNav',
+'#bottomNavNew',
+'.footer',
+'nav[aria-label="breadcrumb"]',
+'.btn.btn-outline-secondary.rounded-pill.w-100.fs-xl-5',
+'.btn.btn-outline-secondary.w-50.fs-xl-5.rounded-pill-start'
+];
+
+
+arr.forEach((el) => {
+	var t = document.querySelector(el);
+	(t) && t.style.setProperty("display", "none", "important");
+});
+
+document.body.style.paddingBottom = '0px';
+
+//幫mainWrapperNew加一個class, 這樣就可以用common.css來控制麵包屑及會員專區按鈕顯示與否
+document.querySelector('#mainWrapperNew').classList.add('app-mode-without-header-footer');
+
+const submitBtn = document.querySelector('.btn.btn-outline-secondary.w-50.fs-xl-5.rounded-pill-end');
+(submitBtn) && submitBtn.classList.remove('rounded-pill-end') & submitBtn.classList.add('rounded-pill');

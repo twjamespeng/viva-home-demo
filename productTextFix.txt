@@ -1,0 +1,15 @@
+var parseTarget = document.querySelector('#productAccordion #flush3.accordion-collapse .accordion-body > .d-flex');
+if (parseTarget) {
+    var str = parseTarget.innerText.split('\n');
+    parseTarget.innerHTML = '<ul class="list-group list-group-flush w-100"></ul>';
+    for (var i=0; i < str.length; i++) {
+        if (!str[i].replace(/\s/g, '').length) {
+            //ignore all space, tab, new line
+        } else {
+            str[i] = str[i].replace('◎', '');
+            parseTarget.querySelector('ul.list-group').insertAdjacentHTML('beforeend', '<li class="list-group-item px-1"><span class="feather icon-viva-check fs-7 text-danger me-2"></span><span>'+ str[i] +'</span></li>');
+        }
+    }
+} else {
+    console.log('Nothing to parse.')
+}

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximun-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://www.vivatv.com.tw/common/images/favicons/favicon.ico">
+<title>商品關鍵字管理</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<style type="text/css">
+
+  .nav-item button {
+    color: var(--bs-gray-700);
+  }
+
+  [contenteditable="true"]:empty:not(:focus):before {
+    content: attr(data-text);
+    
+  }
+  [contenteditable="true"]:empty:focus:before {
+    content: '\A\2003';
+  }
+  [contenteditable="true"]:empty:not(:focus) {
+    color: var(--bs-danger); 
+  }
+
+  [contenteditable="true"]:hover {
+    background-color: var(--bs-gray-200);
+  }
+
+  .keyword {
+    display: flex;
+    position: relative;
+    padding: .5rem;
+
+  }
+  .keyword > .btn {
+    display: block;
+  }
+  .keyword > span {
+    border-radius: .5rem;
+    cursor: pointer;
+  }
+  #Keywords.normal-mode .keyword.active span {
+    background-color: var(--bs-secondary-color);
+    color: white;
+  }
+  #Keywords.edit-mode .keyword > span {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  /*.keyword:hover > span {
+    border-top-right-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+    border-color: var(--bs-secondary-color)!important;
+    background-color: var(--bs-warning-bg-subtle);
+  }*/
+  /*.keyword:hover > .btn {
+    display: block;
+  }*/
+  .nav-item.remove,
+  .keyword-medium-category.remove,
+  .keyword-small-category.remove,
+  .keyword.remove {
+    display: none!important;
+  }
+   
+
+  #Keywords.normal-mode [data-mode="edit"] {
+    display: none;
+  }
+
+  #Keywords.edit-mode [data-mode="edit"] {
+    display: inline-block;
+  }
+
+  #Keywords.edit-mode #toggleEditModeBtn label:after {
+    content: 'ON';
+  }
+  #Keywords.normal-mode #toggleEditModeBtn label:after {
+    content: 'OFF';
+  }
+
+  
+  #toggleEditModeBtn {
+    transform: scale(1.25);
+  }
+
+  #toggleEditModeBtn input,
+  #toggleEditModeBtn label {
+    cursor: pointer;
+  }
+
+
+
+
+  #keywordGroupModal.not-ready #btnSave {
+    display: none;
+  }
+
+  #Keywords.edit-mode .keyword-medium-category-name,
+  #Keywords.edit-mode .keyword-small-category-name {
+    border-bottom: 1px dashed var(--bs-gray-500);
+  }
+
+  .keyword-small-category .align-self-start {
+    min-width: 15rem;
+  }
+  
+  .keyword-medium-category {
+    border-bottom: 5px dotted var(--bs-gray-200);
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+</style>
+</head>
+
+<body>
+
+<form autocomplete="off">
+<div id="Keywords" class="container-fluid p-3 normal-mode">
+  <div class="d-flex flex-column">
+    <div class="d-flex justify-content-between sticky-top mb-3">
+      <div class="d-flex">
+        <div class="fs-3 me-3">商品關鍵字管理</div>
+        
+
+      </div>
+      <div class="d-flex align-items-center">
+        <div id="toggleEditModeBtn" class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+          <label class="form-check-label fw-bold" for="flexSwitchCheckChecked">編輯模式</label>
+        </div>  
+      </div>
+      
+      <div class="d-flex">
+        <div class="d-flex align-items-center me-5">
+          
+        </div>
+        <button class="btn btn-outline-secondary mx-2" type="button" onclick="deselectAll()">清除所有已選項目</button>
+        <button class="btn btn-outline-secondary mx-2" type="button" onclick="pickUpDone()">挑選完成</button>
+      </div>
+    </div>
+    <div class="d-flex flex-column bg-light p-3">
+      
+      <div class="d-flex flex-column">
+        <button class="btn" type="button" data-mode="edit" onclick="createNewBigCategory(this)"><i class="bi bi-plus-circle me-2"></i>新增大分類</button>
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <button class="btn align-self-center" type="button" onclick="deleteBig(this)" title="刪除大分類" data-mode="edit"><i class="bi bi-x-circle"></i></button>
+          <button class="keyword-big-category nav-link active" id="keyword-tab-01" data-bs-toggle="tab" data-bs-target="#keyword-1" type="button" role="tab" contenteditable="false">美妝個清</button>
+        </li>
+      </ul>
+      
+      </div>
+      
+        
+      
+      <div class="tab-content bg-white border border-top-0 p-5" id="myTabContent">
+        <!-- 一組大分類 -->
+        <div class="tab-pane fade show active" id="keyword-1" role="tabpanel" tabindex="0">
+          <div class="keyword-medium-category-group d-flex flex-column">
+            <!-- 一組中分類 -->
+            <div class="keyword-medium-category d-flex flex-column mb-3">
+              <div class="d-flex mb-3">
+                <button class="btn align-self-center" type="button" onclick="deleteMedium(this)" title="刪除中分類" data-mode="edit"><i class="bi bi-x-circle"></i></button>
+                <span class="keyword-medium-category-name fs-4 flex-grow-0 fw-bold px-3 py-2" contenteditable="false">臉部保養</span>
+              </div>
+              <div class="d-flex flex-column mb-3">
+                <div class="keyword-small-category-group d-flex flex-column mb-3">
+                  <!-- 一組小分類 -->
+                  <div class="keyword-small-category d-flex mb-3">
+                    <div class="align-self-start p-3">
+                      <button class="btn align-self-center" type="button" onclick="deleteSmall(this)" title="刪除小分類" data-mode="edit"><i class="bi bi-x-circle"></i></button>
+                      <span class="keyword-small-category-name fs-5 p-3 me-3 col-2" contenteditable="false">洗顏清潔</span>
+                    </div>
+                    
+                    <div class="d-flex flex-wrap">
+                      <div class="keyword btn-group">
+                        <span class="border border-secondary px-3 py-2 align-self-center" contenteditable="false" tabindex="" data-text="請輸入關鍵字">洗面乳</span>
+                        <button class="btn btn-outline-secondary py-2 align-self-center" type="button" onclick="deleteTag(this)" title="刪除關鍵字" data-mode="edit"><i class="bi bi-x-lg"></i></button>
+                      </div>
+                      <div class="keyword btn-group">
+                        <span class="border border-secondary px-3 py-2 align-self-center" contenteditable="false" tabindex="" data-text="請輸入關鍵字">洗顏粉</span>
+                        <button class="btn btn-outline-secondary py-2 align-self-center" type="button" onclick="deleteTag(this)" title="刪除關鍵字" data-mode="edit"><i class="bi bi-x-lg"></i></button>
+                      </div>
+                      <div class="keyword btn-group">
+                        <span class="border border-secondary px-3 py-2 align-self-center" contenteditable="false" tabindex="" data-text="請輸入關鍵字">洗面皂</span>
+                        <button class="btn btn-outline-secondary py-2 align-self-center" type="button" onclick="deleteTag(this)" title="刪除關鍵字" data-mode="edit"><i class="bi bi-x-lg"></i></button>
+                      </div>
+                      <div class="keyword btn-group">
+                        <span class="border border-secondary px-3 py-2 align-self-center" contenteditable="false" tabindex="" data-text="請輸入關鍵字">慕斯</span>
+                        <button class="btn btn-outline-secondary py-2 align-self-center" type="button" onclick="deleteTag(this)" title="刪除關鍵字" data-mode="edit"><i class="bi bi-x-lg"></i></button>
+                      </div>
+                      <div class="keyword btn-group">
+                        <span class="border border-secondary px-3 py-2 align-self-center" contenteditable="false" tabindex="" data-text="請輸入關鍵字">潔面</span>
+                        <button class="btn btn-outline-secondary py-2 align-self-center" type="button" onclick="deleteTag(this)" title="刪除關鍵字" data-mode="edit"><i class="bi bi-x-lg"></i></button>
+                      </div>
+                      <div class="keyword btn-group">
+                        <span class="border border-secondary px-3 py-2 align-self-center" contenteditable="false" tabindex="" data-text="請輸入關鍵字">中性</span>
+                        <button class="btn btn-outline-secondary py-2 align-self-center" type="button" onclick="deleteTag(this)" title="刪除關鍵字" data-mode="edit"><i class="bi bi-x-lg"></i></button>
+                      </div>
+                      <button class="btn" type="button" onclick="createTag(this)" data-mode="edit"><i class="bi bi-plus-circle"></i></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex ps-3">
+                  <button class="btn fs-5" type="button" data-mode="edit" onclick="createNewSmallCategory(this)"><i class="bi bi-plus-circle me-2"></i>新增小分類</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button class="btn fs-4 fw-bold" type="button" data-mode="edit" onclick="createNewMediumCategory(this)"><i class="bi bi-plus-circle me-2"></i>新增中分類</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+</div>
+</form>
+
+<div id="keywordGroupModal" class="modal not-ready" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">請確認所選關鍵字</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="keywordGroup" class="p-3 fs-5 fw-bold text-start" style="word-break: keep-all;"></div>
+      </div>
+      <div class="text-center p-3 border-top bg-light">說明：大中小分類的名稱也會視為關鍵字</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary px-5" data-bs-dismiss="modal">取消</button>
+        <button id="btnSave" type="button" class="btn btn-primary flex-fill">儲存並返回</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+
+  $(document).on('keypress', '[contenteditable="true"]', function(e){
+    if (e.which == 13) {
+      $(this).blur();
+    }
+    return e.which != 13;
+  });
+
+  function createTag(t) {
+    var tagElement = 
+    '<div class="keyword btn-group">'+
+      '<span class="border border-secondary px-3 py-2 align-self-center" contenteditable="true" tabindex="" data-text="請輸入關鍵字"></span>'+
+      '<button class="btn btn-outline-secondary py-2 align-self-center" type="button" onclick="deleteTag(this)" title="刪除關鍵字" data-mode="edit"><i class="bi bi-x-lg"></i></button>'+
+    '</div>';
+
+    $(tagElement).insertBefore(t);
+    $(t).prev().find('span').prop('contentEditable', true);
+    $(t).prev().focus();
+  }
+
+  function deleteTag(t) {
+    if (confirm('確定刪除此關鍵字?')==true) {
+      $(t).parent('.keyword').addClass('remove');
+    }
+  }
+
+  function deleteSmall(t) {
+    if (confirm('確定刪除此小分類? (所屬內容也會一併刪除)')==true) {
+      $(t).closest('.keyword-small-category').addClass('remove');
+    }
+  }
+
+  function deleteMedium(t) {
+    if (confirm('確定刪除此中分類? (所屬內容也會一併刪除)')==true) {
+      $(t).closest('.keyword-medium-category').addClass('remove');
+    }
+  }
+
+  function deleteBig(t) {
+    if (confirm('確定刪除此中分類? (所屬內容也會一併刪除)')==true) {
+      $(t).closest('.nav-item').addClass('remove');
+    }
+  }
+
+  // $('.normal-mode .keyword').click(function(){
+  //   $(this).toggleClass('active');
+  // });
+
+  $(document).on('click', '.normal-mode .keyword', function(){
+    $(this).toggleClass('active');
+  });
+
+  $('#flexSwitchCheckChecked').click(function(){
+    $('#Keywords').toggleClass('edit-mode normal-mode');
+  });
+
+  $('#flexSwitchCheckChecked').on('change', function(){
+    var v = $(this).prop('checked');
+    if (v) {
+      $('[contenteditable]').prop('contentEditable', true);
+    } else {
+      $('[contenteditable]').prop('contentEditable', false);
+    }
+  });
+
+  function pickUpDone() {
+    
+    var keywordValue = '';
+
+    var keywordArr = [];
+    
+
+    $('.keyword.active').each(function(index){
+
+      var bigCategoryID = $(this).closest('.tab-pane').attr('id');
+      var bigCategory = $('[data-bs-target="#'+ bigCategoryID +'"]').text();
+      var mediumCategory = $(this).closest('.keyword-medium-category').find('.keyword-medium-category-name').text();
+      var smallCategory = $(this).closest('.keyword-small-category').find('.keyword-small-category-name').text();
+
+      keywordValue = $(this).find('span').text();
+
+      var keywordObj = {
+        big: '',
+        medium: '',
+        small: '',
+        value: ''
+      };
+
+      keywordObj.big = bigCategory;
+      keywordObj.medium = mediumCategory;
+      keywordObj.small = smallCategory;
+      keywordObj.value = keywordValue;
+      
+      keywordArr.push(keywordObj);
+
+    })
+
+    
+    
+
+    // str = JSON.stringify(keywordArr);
+    str = JSON.stringify(keywordArr, null, 4); 
+    console.log(str);
+    
+
+    if (keywordValue == '') {
+
+      $('#keywordGroup').html('您還沒有選擇關鍵字喔！');
+      $('#keywordGroupModal').addClass('not-ready');
+
+    } else {
+
+      var outputArr = [];
+      var count;
+      $.each(keywordArr, function(index, val) {
+        count = outputArr.push(val.big);
+        count = outputArr.push(val.medium);
+        count = outputArr.push(val.small);
+        count = outputArr.push(val.value);
+      });
+
+      console.log(outputArr + ', count: ' + count);
+      
+
+      function removeDuplicates(outputArr) {
+        return outputArr.filter((item,
+          index) => outputArr.indexOf(item) === index);
+      }
+
+      removeDuplicatesArr = removeDuplicates(outputArr);
+      
+      $('#keywordGroup').html('');
+      $.each(removeDuplicatesArr, function(index, val) {
+
+        if (index == removeDuplicatesArr.length-1) {
+          $('#keywordGroup').append(val);
+        } else {
+          $('#keywordGroup').append(val + ', ');
+        }
+      })
+      
+
+      $('#keywordGroupModal').removeClass('not-ready');
+
+    }
+
+    
+
+    const keywordGroupModal = new bootstrap.Modal('#keywordGroupModal', {
+      keyboard: false
+    })
+
+    keywordGroupModal.show();
+
+  }
+
+
+  var smallCategoryTemplate =
+  '<div class="keyword-small-category d-flex mb-3">'+
+    '<div class="align-self-start p-3">'+
+      '<button class="btn align-self-center" type="button" onclick="deleteSmall(this)" title="刪除小分類" data-mode="edit"><i class="bi bi-x-circle"></i></button>'+
+      '<span class="keyword-small-category-name fs-5 p-3 me-3 col-2" contenteditable="true">小分類名稱</span>'+
+    '</div>'+
+    '<div class="d-flex flex-wrap">'+
+      '<div class="keyword btn-group">'+
+        '<span class="border border-secondary px-3 py-2 align-self-center" contenteditable="true" tabindex="" data-text="請輸入關鍵字"></span>'+
+        '<button class="btn btn-outline-secondary py-2 align-self-center" type="button" onclick="deleteTag(this)" title="刪除關鍵字" data-mode="edit"><i class="bi bi-x-lg"></i></button>'+
+      '</div>'+
+      '<button class="btn" type="button" onclick="createTag(this)" data-mode="edit"><i class="bi bi-plus-circle"></i></button>'+
+    '</div>'+
+  '</div>';
+
+  function createNewSmallCategory(t) {
+    $(t).closest('.keyword-medium-category').find('.keyword-small-category-group').append(smallCategoryTemplate); 
+  }
+
+
+  var mediumCategoryTemplate =
+  '<div class="keyword-medium-category d-flex flex-column mb-3">'+
+    '<div class="d-flex mb-3">'+
+      '<button class="btn align-self-center" type="button" onclick="deleteMedium(this)" title="刪除中分類" data-mode="edit"><i class="bi bi-x-circle"></i></button>'+
+      '<span class="keyword-medium-category-name fs-4 flex-grow-0 fw-bold px-3 py-2" contenteditable="true">中分類名稱</span>'+
+    '</div>'+
+    '<div class="d-flex flex-column mb-3">'+
+      '<div class="keyword-small-category-group d-flex flex-column mb-3">'+
+        '<div class="keyword-small-category d-flex mb-3">'+
+          '<div class="align-self-start p-3">'+
+            '<button class="btn align-self-center" type="button" onclick="deleteSmall(this)" title="刪除小分類" data-mode="edit"><i class="bi bi-x-circle"></i></button>'+
+            '<span class="keyword-small-category-name fs-5 p-3 me-3 col-2" contenteditable="true">小分類名稱</span>'+
+          '</div>'+
+          '<div class="d-flex flex-wrap">'+
+            '<div class="keyword btn-group">'+
+              '<span class="border border-secondary px-3 py-2 align-self-center" contenteditable="true" tabindex="" data-text="請輸入關鍵字"></span>'+
+              '<button class="btn btn-outline-secondary py-2 align-self-center" type="button" onclick="deleteTag(this)" title="刪除關鍵字" data-mode="edit"><i class="bi bi-x-lg"></i></button>'+
+            '</div>'+
+            '<button class="btn" type="button" onclick="createTag(this)" data-mode="edit"><i class="bi bi-plus-circle"></i></button>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+      '<div class="d-flex ps-3">'+
+        '<button class="btn fs-5" type="button" data-mode="edit" onclick="createNewSmallCategory(this)"><i class="bi bi-plus-circle me-2"></i>新增小分類</button>'+
+      '</div>'+
+    '</div>'+
+  '</div>';
+
+  function createNewMediumCategory(t) {
+    $(t).closest('.tab-pane').find('.keyword-medium-category-group').append(mediumCategoryTemplate); 
+  }
+
+
+  function createNewBigCategory(t) {
+
+  var navID = $('#myTab .nav-item').length + 1;
+
+  var bigCategoryNavItem = 
+  '<li class="nav-item">'+
+    '<button class="btn align-self-center" type="button" onclick="deleteBig(this)" title="刪除大分類" data-mode="edit"><i class="bi bi-x-circle"></i></button>'+
+    '<button class="keyword-big-category nav-link" id="keyword-tab-'+ navID +'" data-bs-toggle="tab" data-bs-target="#keyword-'+ navID +'" type="button" role="tab" contenteditable="true">大分類名稱</button>'+
+  '</li>';
+
+  var bigCategoryTemplate = 
+  '<div class="tab-pane fade" id="keyword-'+ navID +'" role="tabpanel" tabindex="0">'+
+    '<div class="keyword-medium-category-group d-flex flex-column">'+
+      '<div class="keyword-medium-category d-flex flex-column mb-3">'+
+        '<div class="d-flex mb-3">'+
+          '<button class="btn align-self-center" type="button" onclick="deleteMedium(this)" title="刪除中分類" data-mode="edit"><i class="bi bi-x-circle"></i></button>'+
+          '<span class="keyword-medium-category-name fs-4 flex-grow-0 fw-bold px-3 py-2" contenteditable="true">中分類名稱</span>'+
+        '</div>'+
+        '<div class="d-flex flex-column mb-3">'+
+          '<div class="keyword-small-category-group d-flex flex-column mb-3">'+
+            '<div class="keyword-small-category d-flex mb-3">'+
+              '<div class="align-self-start p-3">'+
+                '<button class="btn align-self-center" type="button" onclick="deleteSmall(this)" title="刪除小分類" data-mode="edit"><i class="bi bi-x-circle"></i></button>'+
+                '<span class="keyword-small-category-name fs-5 p-3 me-3 col-2" contenteditable="true">小分類名稱</span>'+
+              '</div>'+
+              '<div class="d-flex flex-wrap">'+
+                '<div class="keyword btn-group">'+
+                  '<span class="border border-secondary px-3 py-2 align-self-center" contenteditable="true" tabindex="" data-text="請輸入關鍵字"></span>'+
+                  '<button class="btn btn-outline-secondary py-2 align-self-center" type="button" onclick="deleteTag(this)" title="刪除關鍵字" data-mode="edit"><i class="bi bi-x-lg"></i></button>'+
+                '</div>'+
+                '<button class="btn" type="button" onclick="createTag(this)" data-mode="edit"><i class="bi bi-plus-circle"></i></button>'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+          '<div class="d-flex ps-3">'+
+            '<button class="btn fs-5" type="button" data-mode="edit" onclick="createNewSmallCategory(this)"><i class="bi bi-plus-circle me-2"></i>新增小分類</button>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+    '</div>'+
+    '<div>'+
+      '<button class="btn fs-4 fw-bold" type="button" data-mode="edit" onclick="createNewMediumCategory(this)"><i class="bi bi-plus-circle me-2"></i>新增中分類</button>'+
+    '</div>'+
+  '</div>';
+
+  
+    
+    
+    $('#myTab').append(bigCategoryNavItem);
+    $('#myTabContent').append(bigCategoryTemplate);
+  }
+
+</script>
+
+</body>
+</html>
